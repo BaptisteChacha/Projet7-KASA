@@ -5,9 +5,9 @@ function Error() {
     return (
         <div>
             <Header></Header>
-            <p class='erreur-404'> 404 </p>
+            <p Class='erreur-404'> 404 </p>
             <h1>Oups la page que vous demandez n'existe pas</h1>
-            <p class='retour-accueil'> Retour sur la page d'accueil </p>
+            <a href='http://localhost:3000/'> <p Class='retour-accueil'> Retour sur la page d'accueil </p> </a>
         </div>
     )
 }

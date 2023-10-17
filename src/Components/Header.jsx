@@ -16,7 +16,7 @@ gap: 720.678px;
 function Header() {
     return (
         <div id='divPrincipale' >
-        <img src={LOGO} alt="" className='logo' />
+        <img src={LOGO} alt="" ClassName='logo' />
         <nav>
             <StyledLink to="/">Accueil</StyledLink>
             <StyledLink to="/survey/3">A propos</StyledLink> 
