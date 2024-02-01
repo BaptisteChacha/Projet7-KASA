@@ -1,0 +1,32 @@
+.rectangle img {
+    width: 1240px;
+    height: 827px;
+}
+.fiabilité,
+.respect,
+.service,
+.securité {
+    margin-top: 2%;
+    display: flex;
+    width: 1023px;
+    height: 47px;
+    flex-shrink: 0;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.menu_deroulant {
+    margin-left: 208px;
+    margin-right: 209px;
+}
+.respect img,
+.fiabilité img,
+.service img,
+.securité img {
+    float: right;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+}
+.respect img:active {
+    transform: rotate(180deg);
+}

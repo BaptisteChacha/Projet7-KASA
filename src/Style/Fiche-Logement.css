@@ -1,0 +1,136 @@
+.carroussel {
+    width: 1240px;
+    height: 415px;
+    flex-shrink: 0;
+    border-radius: 25px;
+}
+.title {
+    color: #ff6060;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%; /* 51.336px */
+    margin-top: 2%;
+}
+.location {
+    color: #ff6060;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%; /* 25.668px */
+}
+.host {
+    color: #ff6060;
+    float: right;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;
+}
+.profil {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 45%;
+}
+.tags {
+    width: 115px;
+    height: 25px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #ff6060;
+    color: white;
+    display: flex;
+}
+.Rates {
+    float: right;
+}
+.item {
+    width: 145px;
+    height: 25px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #ff6060;
+    color: white;
+    margin-right: 2%;
+    text-align: center;
+    float: left;
+    margin-top: 1%;
+}
+
+.description,
+.equipements {
+    width: 582px;
+    height: 52px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #ff6060;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 257%;
+    margin-top: 4%;
+    &:hover {
+        cursor: pointer;
+    }
+    padding-left: 2%;
+}
+.description img,
+.equipements img {
+    float: right;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    /*  transform: rotate(180deg); */
+}
+.arrow_back {
+    color: white;
+}
+
+body {
+    width: 1440px;
+    height: 1024px;
+}
+.dropdown {
+    display: flex;
+    float: left;
+}
+.equipements {
+    margin-left: 2%;
+}
+html {
+    margin-left: 2%;
+    margin-top: 2%;
+    margin-bottom: 7%;
+}
+.Description_text,
+.Equipements_text {
+    width: 550px;
+    color: #ff6060;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.6%;
+    margin-top: 3%;
+    -webkit-animation: slide 1s ease-in;
+    animation: slide 1s ease-in;
+}
+.fiabilité,
+.respect,
+.service,
+.securité {
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 2%;
+    width: 1023px;
+    height: 47px;
+    flex-shrink: 0;
+    background-color: #ff6060;
+    color: #ffffff;
+}

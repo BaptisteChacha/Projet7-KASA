@@ -1,7 +1,8 @@
 import Header from '../Components/Header.jsx'
-import img from '../IMG.png'
-import '../Header.css';
-import '../Home.scss';
+import Card from '../Components/Card.jsx'
+import img from '../Images/IMG.png'
+import '../Style/Header.css';
+import '../Style/Home.scss';
 import {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -25,17 +26,7 @@ function Home() {
                     <p Class='Text-logo'>Chez vous, partout et ailleurs</p>
                     <img src={img} alt="" ClassName='img-home' />
                 </section>
-                <section id='Cards'>
-                   
-                    {localS.map((item) => (
-    <li key={ item.id }>
-        <a href='http://localhost:3000/Logement'> <div Class='card'>
-        <img Class='img_location' src= {item.cover} alt="" ClassName='img-home' />
-        {item.title}
-        </div> </a>
-    </li>
-))}
-                </section>
+                <Card></Card>
             </body>
         </div>
     )

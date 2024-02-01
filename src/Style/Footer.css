@@ -1,0 +1,16 @@
+.divFooter {
+    /*display: flex;*/
+    width: 1023px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    /*gap: 28.556px;*/
+    background-color: #000;
+    color: white;
+    text-align: center;
+}
+.divFooter img {
+    padding-right: 1px;
+}

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import '../Header.css';
-import  LOGO from '../LOGO.svg';
+import '../Style/Header.css';
+import  LOGO from '../Images/LOGO.svg';
 
 
 const StyledLink = styled(Link)`
@@ -19,7 +19,7 @@ function Header() {
         <img src={LOGO} alt="" ClassName='logo' />
         <nav>
             <StyledLink to="/">Accueil</StyledLink>
-            <StyledLink to="/survey/3">A propos</StyledLink> 
+            <StyledLink to="/A_Propos">A propos</StyledLink> 
         </nav>
         </div>
     )
