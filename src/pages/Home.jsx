@@ -2,7 +2,7 @@ import Header from '../Components/Header.jsx'
 import Card from '../Components/Card.jsx'
 import img from '../Images/IMG.png'
 import '../Style/Header.css';
-import '../Style/Home.scss';
+
 import {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 

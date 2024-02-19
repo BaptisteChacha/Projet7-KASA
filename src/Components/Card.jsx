@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import '../Style/Card.css';
 
 function Card () {
     var localS = JSON.parse(localStorage.getItem("items"));
@@ -11,9 +12,8 @@ function Card () {
                <div Class='card'>
                <Link to={`/Logement/${item.id}`}>
                 <div ClassName='img-home'>
-                <img Class='img_location' src= {item.cover} alt=""  />
-                 {item.title}
-                </div>
+                <img Class='img_location' src= {item.cover} alt=""/> </div>
+                 <div className='text'> {item.title} </div>
               </Link>
                 </div>
             </li>

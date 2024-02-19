@@ -32,13 +32,15 @@ function A_propos() {
         setInfoService(InfoService === ARROW_BACK ? ARROW_UP : ARROW_BACK)
         console.log(InfoService)
     } 
+    
+
     return (
         <div>
             <Header></Header>
             
             <div className='rectangle'>  <img src={Img2} alt=""  /> </div>
             <div className='menu_deroulant'>
-            <div className='fiabilité'> Fiabilité <img src={InfoFiabilite} alt='' ClassName='arrow_back' onClick={toggleArrowInfoFiabilite}/> 
+            <div className='fiabilité'> Fiabilité <img src={ARROW_BACK} alt='' ClassName='arrow_back' onClick={toggleArrowInfoFiabilite}/> 
             { InfoFiabilite === ARROW_UP ?  <div className='Description_text'> Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.</div>
            : console.log('au revoir') }
             </div>

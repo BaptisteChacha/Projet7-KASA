@@ -4,13 +4,9 @@ nav {
     flex-shrink: 0;
     display: flex;
 }
-img {
-    flex-shrink: 0;
-}
 #divPrincipale {
     display: flex;
-    justify-content: space-between;
-
+    place-content: space-between;
     width: 1290px;
 }
 #divPrincipale a {
@@ -24,15 +20,7 @@ img {
     line-height: 142.6%; /* 34.224px */
     text-decoration-line: underline;
 }
-/*#divPrincipale nav {
-    float: right;
-}*/
-.img-home {
-    width: 1240px;
-    height: 223px;
-    flex-shrink: 0;
-    color: #000000;
-}
+
 /*p {
     color: #000;
     font-family: Montserrat;
@@ -78,18 +66,4 @@ img {
     font-weight: 500;
     line-height: 142.6%;
     text-align: center;
-}
-.card {
-    width: 33%;
-    height: 290px;
-    flex-shrink: 0;
-    border: 1px solid black;
-    margin-left: 50px;
-    border-radius: 25px;
-    margin-bottom: 20%;
-}
-#Cards {
-    display: flex;
-    display: flex;
-    flex-wrap: wrap;
 }
