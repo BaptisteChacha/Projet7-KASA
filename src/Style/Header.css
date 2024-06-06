@@ -18,7 +18,10 @@ nav {
     font-style: normal;
     font-weight: 500;
     line-height: 142.6%; /* 34.224px */
-    text-decoration-line: underline;
+}
+#divPrincipale a:hover {
+    background: rgba(255, 96, 96, 0.1);
+    height: 100%;
 }
 
 /*p {

@@ -117,7 +117,7 @@ html {
     font-style: normal;
     font-weight: 400;
     line-height: 142.6%;
-    margin-top: 3%;
+
     -webkit-animation: slide 1s ease-in;
     animation: slide 1s ease-in;
 }
@@ -133,4 +133,24 @@ html {
     flex-shrink: 0;
     background-color: #ff6060;
     color: #ffffff;
+}
+.logo {
+    height: 100%;
+    width: 100%;
+}
+.principale {
+    width: 80%;
+}
+.Description_text {
+    margin-top: 3%;
+}
+
+.arrow_forward {
+    margin-left: 85%;
+}
+.arrow_back {
+    margin-left: -100%;
+}
+.test {
+    display: flex;
 }

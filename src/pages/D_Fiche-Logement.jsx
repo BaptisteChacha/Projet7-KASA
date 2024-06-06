@@ -11,11 +11,25 @@ import RATE5 from '../Images/RATE5.svg';
 //import COLLAPSE from '../Collapse.svg';
 import ARROW_UP from '../Images/arrow_up.svg';
 import ARROW_BACK from '../Images/arrow_back.svg';
+import Footer from '../Components/Footer.jsx';
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+import  arrow_forward from '../Images/arrow_forward.svg';
+import  arrow_back from '../Images/arrow_back_ios-24px 1.svg';
+
+const StyledLinkFooter = styled(Link)
+`
+    margin-top: 40%;
+    margin-left: 1%;
+    width: 85%;
+    position: relative;
+`
 
 function Logement() {
 
     const [Description, setDescription] = useState('ARROW_BACK') 
     const [Equipements, setEquipements] = useState('ARROW_BACK') 
+    const [count, setCount] = useState(0)
 
     const toggleArrowDescription = () => {
         setDescription(Description === ARROW_BACK ? ARROW_UP : ARROW_BACK)
@@ -26,6 +40,27 @@ function Logement() {
         setEquipements(Equipements === ARROW_BACK ? ARROW_UP : ARROW_BACK)
         console.log(Equipements)
     }
+    const NextImage = () => {
+        if (!detail || !detail.pictures || detail.pictures.length === 0) {
+            console.error("detail or detail.pictures is not defined or empty");
+            return;
+        }    if (typeof count !== 'number' || count < 0 || count >= detail.pictures.length) {
+            console.error("count is out of bounds");
+            return;
+        }    console.log('Bonjour');
+        console.log(detail.pictures.length);
+        console.log(detail.pictures[count]);
+        console.log(count);    if (count < detail.pictures.length - 1) {
+            setCount(count + 1);
+        } else {
+            setCount(0);
+        }
+    };
+    const PreviousImage = () => {
+        console.log('Au revoir')
+        setCount(count - 1)
+    }
+
 
     let detail = [];
     var localS = JSON.parse(localStorage.getItem("items"));
@@ -36,14 +71,19 @@ function Logement() {
             console.log(detail)
         }
     }
+    const test = detail.pictures[count]
     return (
         <body>
-        <div>
+        <div className='principale'>
             <Header></Header>
-            <div class='carroussel'> 
-            <img src={detail.cover} alt="" className='logo' />
+            <div className='carroussel'> 
+            <div className='test' >
+            <img src={test}  class='logo' />
+            <img src={arrow_back}  Class='arrow_back' onClick={PreviousImage} />
+            <img src={arrow_forward}  Class='arrow_forward' onClick={NextImage} />
+            </div>
             <div className='title'>{detail.title} 
-            <div className='host'>{detail.host.name}  <img src={detail.host.picture} alt="profil" class='profil'></img> 
+            <div className='host'>{detail.host.name}  <img src={detail.host.picture[count]} alt="profil" class='profil'></img> 
             </div>
             <div className='location'>{detail.location}</div>
             <div className='Rates'>
@@ -75,6 +115,7 @@ function Logement() {
             </div>
         </div>
         </div>
+        <StyledLinkFooter> <Footer></Footer> </StyledLinkFooter>
         </body>
     )
 }

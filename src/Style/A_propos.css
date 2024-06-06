@@ -8,15 +8,18 @@
 .securité {
     margin-top: 2%;
     display: flex;
-    width: 1023px;
+    width: 1240px;
     height: 47px;
     flex-shrink: 0;
     justify-content: space-between;
     margin-bottom: 1rem;
 }
 .menu_deroulant {
-    margin-left: 208px;
-    margin-right: 209px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6rem;
+    margin-top: 1.5rem;
+    width: 100%;
 }
 .respect img,
 .fiabilité img,
@@ -29,4 +32,25 @@
 }
 .respect img:active {
     transform: rotate(180deg);
+}
+#divContent,
+#divContent2,
+#divContent3,
+#divContent4 {
+    visibility: hidden;
+    animation: slide 1s ease-in;
+    background: #f0f0f0;
+    border-radius: 0 0 0.3rem 0.3rem;
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 1rem;
+    margin-top: -1.2rem;
+    padding: 0.8rem 1rem;
+    position: relative;
+    z-index: -1;
+    color: #ff6060;
+    width: 84%;
+}
+.rotate {
+    transform: rotate(90deg);
 }

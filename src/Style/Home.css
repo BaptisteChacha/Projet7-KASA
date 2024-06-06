@@ -1,0 +1,16 @@
+Footer {
+    margin-top: 23%;
+}
+p {
+    z-index: 1;
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    margin-top: 7%;
+}
+.img-home {
+    width: 100%;
+}
+img {
+    filter: brightness(80%);
+}

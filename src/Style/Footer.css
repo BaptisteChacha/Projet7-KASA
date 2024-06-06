@@ -1,6 +1,6 @@
 .divFooter {
     /*display: flex;*/
-    width: 1023px;
+
     padding-top: 2%;
     padding-bottom: 2%;
     flex-direction: column;
@@ -10,6 +10,8 @@
     background-color: #000;
     color: white;
     text-align: center;
+    margin-top: 78%;
+    margin-left: 1%;
 }
 .divFooter img {
     padding-right: 1px;
