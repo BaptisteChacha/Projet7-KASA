@@ -26,33 +26,38 @@ const StyledLinkFooter = styled(Link)
 `
 
 function Logement() {
-
-    const [Description, setDescription] = useState('ARROW_BACK') 
-    const [Equipements, setEquipements] = useState('ARROW_BACK') 
+    //On cree le usestate pour chaque partie
+    const [Description, setDescription] = useState(ARROW_BACK) 
+    const [Equipements, setEquipements] = useState(ARROW_BACK) 
     const [count, setCount] = useState(0)
-
+    //On crée une fonction qui change le sens de la fleche au clic
     const toggleArrowDescription = () => {
         setDescription(Description === ARROW_BACK ? ARROW_UP : ARROW_BACK)
-        console.log(Description)
+        console.log(detail.description)
     }
 
     const toggleArrowEquipements = () => {
         setEquipements(Equipements === ARROW_BACK ? ARROW_UP : ARROW_BACK)
         console.log(Equipements)
     }
+    //On crée une fonction pour mettre en place le caroussel
     const NextImage = () => {
+        //On verifie que detail.picture existe bien et que sa longueur n'est pas null, sinon on affiche un message d'erreur
         if (!detail || !detail.pictures || detail.pictures.length === 0) {
             console.error("detail or detail.pictures is not defined or empty");
             return;
+            //On verifie que le type de count est bien un entier, qu'il n'est pas inferieur a 0 et pas superieur a la taille du tableau
         }    if (typeof count !== 'number' || count < 0 || count >= detail.pictures.length) {
             console.error("count is out of bounds");
             return;
         }    console.log('Bonjour');
         console.log(detail.pictures.length);
         console.log(detail.pictures[count]);
+        //Si count est inferieur a la taille du tableau -1 on augmente le compteur de 1
         console.log(count);    if (count < detail.pictures.length - 1) {
             setCount(count + 1);
         } else {
+            //Sinon on lui assigne la valeur 0
             setCount(0);
         }
     };
@@ -61,18 +66,23 @@ function Logement() {
         setCount(count - 1)
     }
 
-
+    //On crée un tableau vide
     let detail = [];
+    //On recupère le localstorage 
     var localS = JSON.parse(localStorage.getItem("items"));
     const questionNumber = useParams();
+    //Tant que i est inferieur a la taille du localstorage on l'incremente de 
     for (let i = 0; i< localS.length; i++){
+        //On verifie que l'id selectionné précédement corresponde bien a celui trouvé dans le localstorage
         if(questionNumber.id === localS[i].id){
+            //On enregistre les données de cet utilisateur dans detail
             detail = localS[i];
             console.log(detail)
         }
     }
     const test = detail.pictures[count]
     return (
+        //On utilise les differentes données dans detail pour mettre la page logement a jour en fonction de l'utilisateur
         <body>
         <div className='principale'>
             <Header></Header>
@@ -83,7 +93,7 @@ function Logement() {
             <img src={arrow_forward}  Class='arrow_forward' onClick={NextImage} />
             </div>
             <div className='title'>{detail.title} 
-            <div className='host'>{detail.host.name}  <img src={detail.host.picture[count]} alt="profil" class='profil'></img> 
+            <div className='host'>{detail.host.name}  <img src={detail.host.picture} alt="profil" class='profil'></img> 
             </div>
             <div className='location'>{detail.location}</div>
             <div className='Rates'>
@@ -100,10 +110,13 @@ function Logement() {
         ))} </div>
         <div className='dropdown'>
            <div className='description'> Description <img src={Description} alt="" ClassName='arrow_back'   onClick={toggleArrowDescription} /> 
-             { Description === ARROW_UP ?  <div className='Description_text'> {detail.description} </div>
-           : console.log('au revoir') } </div> 
+           { Description === ARROW_UP ?  <div className='description_content'> 
+            {detail.description}
+        </div>
+           : console.log('au revoir') }
+              </div> 
            <div className='equipements'> Equipements <img src={Equipements} alt="" ClassName='arrow_back' onClick={toggleArrowEquipements}/> 
-           { Equipements === ARROW_UP ?  <div> 
+           { Equipements === ARROW_UP ?  <div className='equipements_content'> 
             {detail.equipments.map((equipements) => (
                 <ul>
                     <li className='Equipements_text'>{equipements}</li>
@@ -119,5 +132,4 @@ function Logement() {
         </body>
     )
 }
-
 export default Logement

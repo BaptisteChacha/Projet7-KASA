@@ -21,21 +21,18 @@ function toggle()
 {   
 
     let d1 = document.getElementById("divContent");
-    const [Rotate, setRotate] = UseState(0)
   
 	if (d1.style.visibility==="hidden")
 	{
 		// Contenu caché, le montrer
 		 d1.style.visibility = "visible";
 		 d1.style.height = "auto";	// Optionnel rétablir la hauteur
-         setRotate(180)
 	}
 	else
 	{
 		// Contenu visible, le cacher
 		d1.style.visibility = "hidden";
 		d1.style.height = "0";			// Optionnel libérer l'espace
-        //setRotate(180)
 	}
     console.log(d1.style.visibility)
 }
@@ -103,17 +100,21 @@ function toggle4()
 
 
 function A_propos() {
-    let d1 = document.getElementById("divContent1");
+    
     
     let [InfoFiabilite, setInfoFiabilite] = UseState('ARROW_BACK') 
     const [InfoRespect, setInfoRespect] = UseState('ARROW_BACK') 
     const [InfoSecurite, setInfoSecurite] = UseState('ARROW_BACK') 
     const [InfoService, setInfoService] = UseState('ARROW_BACK') 
     
-     
+
+    const handleRotate = () => {
+        alert('bonjour')
+    }
+
     const toggleArrowInfoFiabilite = () => {
         setInfoFiabilite(InfoFiabilite === ARROW_BACK ? ARROW_UP : ARROW_BACK)
-        console.log(InfoFiabilite)
+        console.log(InfoFiabilite)        
     } 
     const toggleArrowInfoRespect = () => {
         setInfoRespect(InfoRespect === ARROW_BACK ? ARROW_UP : ARROW_BACK)
@@ -138,9 +139,7 @@ function A_propos() {
             <div className='menu_deroulant'>
 
 
-             <div className='fiabilité'> Fiabilité <img src={ARROW_BACK} alt='' ClassName='arrow_back' onClick={ toggle }/> 
-            { InfoFiabilite === ARROW_UP ?  <div className='Description_text'></div>
-           : console.log('au revoir') }
+             <div className='rotating-box'> Fiabilité <img src={ARROW_BACK} alt='' ClassName='arrow_back' onClick={ handleRotate }/> 
             </div>
             <div id="divContent">  Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.</div>
             
