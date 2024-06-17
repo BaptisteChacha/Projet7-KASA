@@ -23,18 +23,6 @@ nav {
     background: rgba(255, 96, 96, 0.1);
     height: 100%;
 }
-
-/*p {
-    color: #000;
-    font-family: Montserrat;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 142.6%;  68.448px 
-    position: absolute;
-    z-index: 1;
-}*/
-
 .erreur-404 {
     display: flex;
     width: 597px;
@@ -69,4 +57,7 @@ nav {
     font-weight: 500;
     line-height: 142.6%;
     text-align: center;
+}
+li {
+    list-style: none;
 }

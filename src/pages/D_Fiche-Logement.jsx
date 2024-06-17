@@ -8,7 +8,6 @@ import RATE2 from '../Images/RATE2.svg';
 import RATE3 from '../Images/RATE3.svg';
 import RATE4 from '../Images/RATE4.svg';
 import RATE5 from '../Images/RATE5.svg';
-//import COLLAPSE from '../Collapse.svg';
 import ARROW_UP from '../Images/arrow_up.svg';
 import ARROW_BACK from '../Images/arrow_back.svg';
 import Footer from '../Components/Footer.jsx';

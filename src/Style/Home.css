@@ -14,3 +14,6 @@ p {
 img {
     filter: brightness(80%);
 }
+li {
+    list-style: none;
+}

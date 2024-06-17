@@ -5,7 +5,6 @@ import '../Style/Header.css';
 import Footer from '../Components/Footer.jsx';
 import '../Style/Home.css';
 import {useEffect, /*useState*/} from 'react';
-//import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -13,6 +12,7 @@ const StyledLinkFooter = styled(Link)
 `
     margin-top: 24%;
     margin-left: 1%;
+    list-style: none;
 `
 
 function Home() {
@@ -25,8 +25,6 @@ function Home() {
             .then((response) => window.localStorage.setItem("items", JSON.stringify(response)))
             .catch((error) => console.log(error))
     )}, [] )
-    //var localS = JSON.parse(localStorage.getItem("items"));
-   // console.log(localS[0])
     return (
         <div>
             <Header></Header>
