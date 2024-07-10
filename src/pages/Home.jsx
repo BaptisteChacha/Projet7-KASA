@@ -26,17 +26,18 @@ function Home() {
             .catch((error) => console.log(error))
     )}, [] )
     return (
-        <div>
+        <div className='dimension'>
+            
             <Header></Header>
-            <body>
+              
                 <section>
                     <p ClassName='Text-logo'>Chez vous, partout et ailleurs</p>
                     <img src={img} alt="" ClassName='img-home' />
                 </section>
                 <Card></Card>
-            </body>
+            
             <StyledLinkFooter> <Footer></Footer> </StyledLinkFooter>
-        </div>
+        </div> 
     )
 }
 

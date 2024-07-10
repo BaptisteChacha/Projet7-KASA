@@ -17,3 +17,10 @@ img {
 li {
     list-style: none;
 }
+#root {
+    width: 1024px;
+}
+
+body {
+    width: 100%;
+}

@@ -1,7 +1,7 @@
 #Cards {
     display: flex;
     flex-wrap: wrap;
-    width: 93%;
+    width: 131%;
 }
 .card {
     margin-top: 5%;
@@ -41,7 +41,6 @@ li {
     color: #fff;
     font-size: 18px;
     position: absolute;
-    width: 95%;
     margin-top: -4%;
     font-weight: bold;
     font-weight: bold;
