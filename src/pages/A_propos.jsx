@@ -49,9 +49,7 @@ function A_propos() {
     return (
         <div>
             <Header></Header>
-
             <div className='menu_deroulant'>
-
 
              <div className='fiabilité'> Fiabilité <img src={InfoFiabilite} alt='' ClassName='arrow_back' onClick={ toggleArrowInfoFiabilite }/> 
              {InfoFiabilite === ARROW_UP ?  <div className='description_content'> 
@@ -65,25 +63,29 @@ function A_propos() {
             
             
             
-            <div className='respect'> Respect <img src={ARROW_BACK} alt='' ClassName='arrow_back_respect' onClick={ toggleArrowInfoRespect }/>
-            { InfoRespect === ARROW_UP ?  <div className='Description_text'></div>
+            <div className='respect'> Respect <img src={InfoRespect} alt='' ClassName='arrow_back_respect' onClick={ toggleArrowInfoRespect }/>
+            { InfoRespect === ARROW_UP ?  <div className='Description_text'>
+                La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.
+            </div>
            : console.log('au revoir') }
             </div>
-            <div id="divContent2">  La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.</div>
+            
 
 
-            <div className='service'> Service  <img src={InfoService} alt='' ClassName='arrow_back' onClick={ toggleArrowInfoSecurite }/> 
-            { InfoService === ARROW_UP ?  <div className='Description_text'> </div>
+            <div className='service'> Service  <img src={InfoService} alt='' ClassName='arrow_back' onClick={ toggleArrowInfoService }/> 
+            { InfoService === ARROW_UP ?  <div className='Description_text'> 
+                Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question.
+            </div>
            : console.log('au revoir') }
             </div>
-            <div id="divContent3">  Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question.</div>
             
            
-            <div className='securité'>  Securité  <img src={InfoSecurite} alt='' ClassName='arrow_back' onClick={ toggleArrowInfoService }/> 
-            { InfoSecurite === ARROW_UP ?  <div className='Description_text'> .</div>
+            <div className='securité'>  Securité  <img src={InfoSecurite} alt='' ClassName='arrow_back' onClick={ toggleArrowInfoSecurite }/> 
+            { InfoSecurite === ARROW_UP ?  <div className='Description_text'> 
+                La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes
+            </div>
            : console.log('au revoir') }
              </div>
-             <div id="divContent4">  La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes</div>
 
             </div>
             <Footer></Footer>

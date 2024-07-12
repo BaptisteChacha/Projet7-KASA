@@ -11,6 +11,10 @@ p {
 .img-home {
     width: 100%;
 }
+.img-principale {
+    border-radius: 25px;
+    opacity: 30%;
+}
 img {
     filter: brightness(80%);
 }
@@ -23,4 +27,17 @@ li {
 
 body {
     width: 100%;
+}
+section {
+    .img-home {
+        border-radius: 5%;
+    }
+}
+#idPrincipale {
+    width: 1240px;
+    padding-top: 40px;
+}
+.section_principale {
+    width: 1240px;
+    height: 223px;
 }

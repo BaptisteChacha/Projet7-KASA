@@ -8,11 +8,9 @@
     align-items: center;
     /*gap: 28.556px;*/
     background-color: #000;
-    width: 120%;
+    width: 1240px;
     color: white;
     text-align: center;
-    margin-top: 78%;
-    margin-left: 1%;
 }
 .divFooter img {
     padding-right: 1px;

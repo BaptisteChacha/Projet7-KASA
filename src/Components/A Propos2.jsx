@@ -25,10 +25,6 @@ function A_propos() {
     const [InfoService, setInfoService] = UseState('ARROW_BACK') 
     
 
-    const handleRotate = () => {
-        alert('bonjour')
-    }
-
     const toggleArrowInfoFiabilite = () => {
         setInfoFiabilite(InfoFiabilite === ARROW_BACK ? ARROW_UP : ARROW_BACK)
         console.log(InfoFiabilite)        
@@ -56,19 +52,17 @@ function A_propos() {
 
              <div className='rotating-box'> Fiabilité <img src={InfoFiabilite} alt='' ClassName='arrow_back' onClick={ toggleArrowInfoFiabilite }/> 
             
-            { InfoFiabilite === ARROW_UP ?  <div className='description_content'> 
+            { InfoFiabilite === ARROW_UP ?  
+            <div className='description_content'> 
                 Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.
-        </div>
+            </div>
            : console.log('au revoir') }
             
        
-              </div> 
-              </div>
+                     </div> 
+                 </div>
               </div>
     )}
 
             
-            
-            
-         
 export default A_propos

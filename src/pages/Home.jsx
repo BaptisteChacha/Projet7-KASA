@@ -16,8 +16,6 @@ const StyledLinkFooter = styled(Link)
 `
 
 function Home() {
- //   const [surveyData, setSurveyData] = useState({})
- //   const { questionNumber } = useParams()
 
     useEffect(() => {
         fetch('https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json')
@@ -30,9 +28,9 @@ function Home() {
             
             <Header></Header>
               
-                <section>
+                <section ClassName="section_principale">
                     <p ClassName='Text-logo'>Chez vous, partout et ailleurs</p>
-                    <img src={img} alt="" ClassName='img-home' />
+                    <img src={img} alt="" ClassName='img-principale' />
                 </section>
                 <Card></Card>
             

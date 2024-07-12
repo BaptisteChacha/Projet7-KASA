@@ -7,21 +7,21 @@ nav {
 #divPrincipale {
     display: flex;
     place-content: space-between;
-    width: 1290px;
+    width: 1240px;
+    padding-bottom: 3%;
 }
 #divPrincipale a {
-    width: 136px;
+    width: 309px;
     color: #ff6060;
     text-align: right;
     font-family: Montserrat;
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
-    line-height: 142.6%; /* 34.224px */
+    line-height: 315%; /* 34.224px */
 }
 #divPrincipale a:hover {
     background: rgba(255, 96, 96, 0.1);
-    height: 100%;
 }
 .erreur-404 {
     display: flex;
