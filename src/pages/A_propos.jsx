@@ -50,18 +50,15 @@ function A_propos() {
         <div>
             <Header></Header>
             <div className='menu_deroulant'>
+                
 
              <div className='fiabilité'> Fiabilité <img src={InfoFiabilite} alt='' ClassName='arrow_back' onClick={ toggleArrowInfoFiabilite }/> 
-             {InfoFiabilite === ARROW_UP ?  <div className='description_content'> 
-                Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.
-        </div>
+             {InfoFiabilite === ARROW_UP ?  <div className='Description_text'> 
+              Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.
+       </div>
            : console.log('au revoir') }
             </div>            
-            
-    
-            
-            
-            
+                        
             
             <div className='respect'> Respect <img src={InfoRespect} alt='' ClassName='arrow_back_respect' onClick={ toggleArrowInfoRespect }/>
             { InfoRespect === ARROW_UP ?  <div className='Description_text'>
@@ -70,7 +67,6 @@ function A_propos() {
            : console.log('au revoir') }
             </div>
             
-
 
             <div className='service'> Service  <img src={InfoService} alt='' ClassName='arrow_back' onClick={ toggleArrowInfoService }/> 
             { InfoService === ARROW_UP ?  <div className='Description_text'> 
