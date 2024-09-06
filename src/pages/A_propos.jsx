@@ -3,7 +3,6 @@ import '../Style/Header.css';
 import ARROW_UP from '../Images/arrow_up.svg';
 import ARROW_BACK from '../Images/arrow_back.svg';
 import {useState} from "react"
-import '../Style/Fiche-Logement.css';
 import '../Style/A_propos.css';
 import Img2 from '../Images/IMG2.png'
 import Footer from '../Components/Footer.jsx';
@@ -19,13 +18,11 @@ const StyledLinkFooter = styled(Link)
 
 function A_propos() {
     
-    
     let [InfoFiabilite, setInfoFiabilite] = useState(ARROW_BACK) 
     const [InfoRespect, setInfoRespect] = useState(ARROW_BACK) 
     const [InfoSecurite, setInfoSecurite] = useState(ARROW_BACK) 
     const [InfoService, setInfoService] = useState(ARROW_BACK) 
     
-
 
     const toggleArrowInfoFiabilite = () => {
         setInfoFiabilite(InfoFiabilite === ARROW_BACK ? ARROW_UP : ARROW_BACK)
@@ -42,8 +39,16 @@ function A_propos() {
     const toggleArrowInfoService = () => {
         setInfoService(InfoService === ARROW_BACK ? ARROW_UP : ARROW_BACK)
         console.log(InfoService)
+        setIsClicked(isClicked === true ? false : true)
+        console.log(isClicked)
     } 
     
+
+
+    const [isClicked, setIsClicked] = useState(false)
+  /*  const click =() => {
+        setIsClicked(isClicked == true ? false : true)
+    }*/
 
 
     return (
@@ -51,9 +56,9 @@ function A_propos() {
             <Header></Header>
             <div className='menu_deroulant'>
                 
-
+           
              <div className='fiabilité'> Fiabilité <img src={InfoFiabilite} alt='' ClassName='arrow_back' onClick={ toggleArrowInfoFiabilite }/> 
-             {InfoFiabilite === ARROW_UP ?  <div className='Description_text'> 
+             {InfoFiabilite === ARROW_UP ?   <div className={isClicked ? 'classe-clic' : 'Description_text'}> 
               Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.
        </div>
            : console.log('au revoir') }
@@ -68,10 +73,9 @@ function A_propos() {
             </div>
             
 
-            <div className='service'> Service  <img src={InfoService} alt='' ClassName='arrow_back' onClick={ toggleArrowInfoService }/> 
-            { InfoService === ARROW_UP ?  <div className='Description_text'> 
-                Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question.
-            </div>
+            <div className={isClicked ? 'classe-clic' : 'service'}> Service  <img src={InfoService} alt='' ClassName='arrow_back' onClick={ toggleArrowInfoService }/> 
+            { InfoService === ARROW_UP ?  <div className='Description_text'>
+                 Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question. </div>
            : console.log('au revoir') }
             </div>
             

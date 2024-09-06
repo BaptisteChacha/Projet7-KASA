@@ -16,9 +16,8 @@ const StyledLinkFooter = styled(Link)
 `
 
 function Home() {
-
     useEffect(() => {
-        fetch('https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json')
+        fetch('https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json', {mode: 'no-cors'})
             .then((response) => response.json()
             .then((response) => window.localStorage.setItem("items", JSON.stringify(response)))
             .catch((error) => console.log(error))

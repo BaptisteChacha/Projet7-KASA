@@ -51,3 +51,15 @@
     color: #ff6060;
     width: 84%;
 }
+.classe-clic {
+    align-items: center;
+    border-radius: 5px;
+    justify-content: space-between;
+    width: 1240px;
+    height: 47px;
+    flex-shrink: 0;
+    background-color: #ff6060;
+    color: #ffffff;
+    margin-bottom: 6rem;
+    display: block;
+}
