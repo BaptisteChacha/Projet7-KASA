@@ -73,11 +73,11 @@ function A_propos() {
             </div>
             
 
-            <div className={isClicked ? 'classe-clic' : 'service'}> Service  <img src={InfoService} alt='' ClassName='arrow_back' onClick={ toggleArrowInfoService }/> 
+            <div className={isClicked ? 'classe-clic' : 'service'}> Service  <img src={InfoService} alt='' ClassName='arrow_back' onClick={ toggleArrowInfoService }/> </div>
             { InfoService === ARROW_UP ?  <div className='Description_text'>
                  Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question. </div>
            : console.log('au revoir') }
-            </div>
+            
             
            
             <div className='securité'>  Securité  <img src={InfoSecurite} alt='' ClassName='arrow_back' onClick={ toggleArrowInfoSecurite }/> 

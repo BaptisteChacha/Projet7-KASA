@@ -60,6 +60,5 @@
     flex-shrink: 0;
     background-color: #ff6060;
     color: #ffffff;
-    margin-bottom: 6rem;
-    display: block;
+    display: flex;
 }
