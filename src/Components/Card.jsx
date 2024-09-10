@@ -7,7 +7,7 @@ function Card () {
     return (
         <div>
 <section id='Cards'>
-    <ul>
+    <ul className='list_card'>
         {localS.map((item) => (
             <li key={ item.id }>
                <div Class='card'>

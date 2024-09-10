@@ -73,7 +73,6 @@
     font-style: normal;
     font-weight: 500;
     line-height: 257%;
-    margin-top: 4%;
     &:hover {
         cursor: pointer;
     }
@@ -107,17 +106,7 @@ html {
     margin-top: 2%;
     margin-bottom: 7%;
 }
-.Description_text,
-.Equipements_text {
-    color: #ff6060;
-    font-family: Montserrat;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 142.6%;
-    -webkit-animation: slide 1s ease-in;
-    animation: slide 1s ease-in;
-}
+
 .fiabilité,
 .respect,
 .service,
@@ -139,10 +128,6 @@ html {
     width: 1440px;
     height: 1024px;
 }
-.Description_text {
-    margin-top: 3%;
-}
-
 .arrow_forward {
     margin-left: 85%;
 }
@@ -171,10 +156,57 @@ html {
     font-weight: 400;
     line-height: 142.6%;
     animation: 3s ease-in 1s reverse both running slidein;
+    padding-left: 0px;
 }
 .equipements_content {
     background: #e9e9e9;
 }
 #id {
     width: 100%;
+}
+.classe-clic-equipements {
+    align-items: center;
+    margin-bottom: 2%;
+    margin-left: 0;
+    padding-left: 2%;
+    line-height: 257%;
+    font-size: 18px;
+    border-radius: 5px;
+    justify-content: space-between;
+    width: 605.27px;
+    height: 52px;
+    flex-shrink: 0;
+    background-color: #ff6060;
+    color: #ffffff;
+    display: block;
+    margin-left: 2%;
+    img {
+        float: right;
+        width: 50px;
+        height: 50px;
+    }
+}
+.classe-clic-description {
+    align-items: center;
+    margin-bottom: 2%;
+    margin-left: 0;
+    padding-left: 2%;
+    line-height: 257%;
+    font-size: 18px;
+    border-radius: 5px;
+    justify-content: space-between;
+    width: 605.27px;
+    height: 52px;
+    flex-shrink: 0;
+    background-color: #ff6060;
+    color: #ffffff;
+    display: block;
+    img {
+        float: right;
+        width: 50px;
+        height: 50px;
+    }
+}
+.container {
+    max-width: 1200px;
 }

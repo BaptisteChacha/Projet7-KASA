@@ -33,26 +33,9 @@
 .respect img:active {
     transform: rotate(180deg);
 }
-#divContent,
-#divContent2,
-#divContent3,
-#divContent4 {
-    visibility: hidden;
-    animation: slide 1s ease-in;
-    background: #f0f0f0;
-    border-radius: 0 0 0.3rem 0.3rem;
-    font-size: 16px;
-    line-height: 23px;
-    margin-bottom: 1rem;
-    margin-top: -1.2rem;
-    padding: 0.8rem 1rem;
-    position: relative;
-    z-index: -1;
-    color: #ff6060;
-    width: 84%;
-}
 .classe-clic {
     align-items: center;
+    margin-bottom: 2%;
     border-radius: 5px;
     justify-content: space-between;
     width: 1240px;
@@ -61,4 +44,32 @@
     background-color: #ff6060;
     color: #ffffff;
     display: flex;
+    img {
+        width: 50px;
+        height: 50px;
+    }
+}
+.texte_page_a_propos {
+    color: #ff6060;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.6%;
+    -webkit-animation: slide 1s ease-in;
+    animation: slide 1s ease-in;
+    width: 1240px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.Description_text,
+.Equipements_text {
+    color: #ff6060;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.6%;
+    -webkit-animation: slide 1s ease-in;
+    animation: slide 1s ease-in;
 }

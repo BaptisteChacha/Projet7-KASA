@@ -12,7 +12,6 @@ p {
     width: 100%;
 }
 .img-principale {
-    border-radius: 25px;
     opacity: 30%;
 }
 img {
@@ -40,4 +39,12 @@ section {
 .section_principale {
     width: 1240px;
     height: 223px;
+}
+.container_img_header {
+    width: 1240px;
+    height: 223px;
+    border-radius: 10px;
+    img {
+        border-radius: 20px;
+    }
 }

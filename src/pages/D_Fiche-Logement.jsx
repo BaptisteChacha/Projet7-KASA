@@ -26,6 +26,8 @@ const StyledLinkFooter = styled(Link)
 
 function Logement() {
     //On cree le usestate pour chaque partie
+    const [isClicked, setIsClicked] = useState(false)
+    const [isClicked2, setIsClicked2] = useState(false)
     const [Description, setDescription] = useState(ARROW_BACK) 
     const [Equipements, setEquipements] = useState(ARROW_BACK) 
     const [count, setCount] = useState(0)
@@ -33,11 +35,15 @@ function Logement() {
     const toggleArrowDescription = () => {
         setDescription(Description === ARROW_BACK ? ARROW_UP : ARROW_BACK)
         console.log(detail.description)
+        setIsClicked(isClicked === true ? false : true)
+        console.log(isClicked)
     }
 
     const toggleArrowEquipements = () => {
         setEquipements(Equipements === ARROW_BACK ? ARROW_UP : ARROW_BACK)
         console.log(Equipements)
+        setIsClicked(isClicked === true ? false : true)
+        console.log(isClicked)
     }
     //On crée une fonction pour mettre en place le caroussel
     const NextImage = () => {
@@ -108,13 +114,13 @@ function Logement() {
                 <div className='item'>{item} </div> 
         ))} </div>
         <div className='dropdown'>
-           <div className='description'> Description <img src={Description} alt="" ClassName='arrow_back'   onClick={toggleArrowDescription} /> 
+           <div className={isClicked ? 'classe-clic-description' : 'description'}> Description <img src={Description} alt="" ClassName='arrow_back'   onClick={toggleArrowDescription} /> 
            { Description === ARROW_UP ?  <div className='description_content'> 
             {detail.description}
         </div>
            : console.log('au revoir') }
               </div> 
-           <div className='equipements'> Equipements <img src={Equipements} alt="" ClassName='arrow_back' onClick={toggleArrowEquipements}/> 
+           <div className={isClicked ? 'classe-clic-equipements' : 'equipements'}> Equipements <img src={Equipements} alt="" ClassName='arrow_back' onClick={toggleArrowEquipements}/> 
            { Equipements === ARROW_UP ?  <div className='equipements_content'> 
             {detail.equipments.map((equipements) => (
                 <ul>
@@ -126,9 +132,14 @@ function Logement() {
            : console.log('au revoir') } </div> 
             </div>
         </div>
+       
         </div>
+        <div className='container'>
         <StyledLinkFooter> <Footer></Footer> </StyledLinkFooter>
+        </div>
         </body>
+        
     )
 }
+
 export default Logement

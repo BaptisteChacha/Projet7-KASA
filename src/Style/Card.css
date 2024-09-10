@@ -55,7 +55,7 @@ li {
     height: 100%;
     object-fit: cover;
 }
-ul {
+.list_card {
     display: flex;
     flex-wrap: wrap;
     background: #e9e9e9;

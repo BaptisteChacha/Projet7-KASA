@@ -29,7 +29,8 @@ function Home() {
               
                 <section ClassName="section_principale">
                     <p ClassName='Text-logo'>Chez vous, partout et ailleurs</p>
-                    <img src={img} alt="" ClassName='img-principale' />
+                    <div className='container_img_header'>
+                    <img src={img} alt="" ClassName='img-principale' /> </div>
                 </section>
                 <Card></Card>
             
