@@ -1,24 +1,26 @@
 import { Link } from 'react-router-dom'
 import '../Style/Card.css';
-import {useEffect, useState, /*useState*/} from 'react';
+//import {useEffect, useState, /*useState*/} from 'react';
 
 function Card () {
     var localS = JSON.parse(localStorage.getItem("items"));
-    console.log(localS)
-    if (localS === null) {
-        fetch('https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json', {
-            method: 'GET',
-            mode: 'cors',  // CORS activé par défaut pour les requêtes cross-origin
-            headers: {
-              'Content-Type': 'application/json',
-            },
-          })
+    console.log(localS)  
+        if (localS === null) {
+             fetch('https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json', {
+                method: 'GET',
+                mode: 'cors', 
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+            })
+            .then(response => response.json())  
+            .then(data => {
+                window.localStorage.setItem("items", JSON.stringify(data));  
+                console.log(localStorage.getItem("items"));  
+            })
+            .catch(error => console.log(error));  
         
-            .then((response) => response.json()
-            .then((response) => window.localStorage.setItem("items", JSON.stringify(response)))
-            .then(console.log(localStorage))
-            .catch((error) => console.log(error))
-    )}
+    }
     return (
         <div>
 <section id='Cards'>

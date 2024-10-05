@@ -4,7 +4,7 @@ import img from '../Images/IMG.png'
 import '../Style/Header.css';
 import Footer from '../Components/Footer.jsx';
 import '../Style/Home.css';
-import {useEffect, useState, /*useState*/} from 'react';
+import { useState, /*useState*/} from 'react';
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -25,6 +25,9 @@ function Home() {
             .then(console.log(localStorage))
             .catch((error) => console.log(error))
     )}, [] )
+    var localS = JSON.parse(localStorage.getItem("items"));
+    console.log(localS)
+    {localS.map((item) => (console.log(item)))}
     return (
         <div className='dimension'>
             
