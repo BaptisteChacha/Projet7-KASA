@@ -3,6 +3,7 @@
     height: 415px;
     flex-shrink: 0;
     border-radius: 25px;
+    flex: 1; /* Occupe tout l'espace restant pour que le footer reste en bas */
 }
 .title {
     color: #ff6060;
@@ -91,7 +92,9 @@
 
 body {
     width: 1240px;
-    height: 643px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .dropdown {
     display: flex;
@@ -102,7 +105,7 @@ body {
 }
 html {
     height: 100%;
-    margin-left: 100px;
+    margin-left: 50px;
     margin-top: 2%;
     margin-bottom: 7%;
 }
@@ -125,8 +128,10 @@ html {
     width: 100%;
 }
 .principale {
-    width: 1440px;
-    height: 1024px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* S'assure que la page prend toute la hauteur */
+    width: 1240px;
 }
 .arrow_forward {
     margin-left: 85%;
@@ -195,7 +200,7 @@ html {
     font-size: 18px;
     border-radius: 5px;
     justify-content: space-between;
-    width: 605.27px;
+    width: 582px;
     height: 52px;
     flex-shrink: 0;
     background-color: #ff6060;
@@ -208,5 +213,20 @@ html {
     }
 }
 .container {
-    max-width: 1200px;
+    width: 100%;
+}
+.divFooter {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    position: relative; /* Dynamique selon le contenu */
+}
+.footer-container {
+    position: relative;
+    transition: transform 0.3s ease-in-out; /* Animation fluide */
+}
+.footer-container.menu-open {
+    transform: translateY(180px); /* Ajuste cette valeur selon la hauteur de ton menu */
 }

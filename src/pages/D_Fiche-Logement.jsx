@@ -1,145 +1,132 @@
-import { useParams } from 'react-router-dom'
-import Header from '../Components/Header.jsx'
-import {useState} from "react"
+import { useParams } from 'react-router-dom';
+import Header from '../Components/Header.jsx';
+import { useState } from 'react';
 import '../Style/Header.css';
 import '../Style/Fiche-Logement.css';
+import Footer from '../Components/Footer.jsx';
+import arrow_forward from '../Images/arrow_forward.svg';
+import arrow_back from '../Images/arrow_back_ios-24px 1.svg';
+import ARROW_UP from '../Images/arrow_up.svg';
+import ARROW_BACK from '../Images/arrow_back.svg';
 import RATE1 from '../Images/RATE1.svg';
 import RATE2 from '../Images/RATE2.svg';
 import RATE3 from '../Images/RATE3.svg';
 import RATE4 from '../Images/RATE4.svg';
 import RATE5 from '../Images/RATE5.svg';
-import ARROW_UP from '../Images/arrow_up.svg';
-import ARROW_BACK from '../Images/arrow_back.svg';
-import Footer from '../Components/Footer.jsx';
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import  arrow_forward from '../Images/arrow_forward.svg';
-import  arrow_back from '../Images/arrow_back_ios-24px 1.svg';
-
-const StyledLinkFooter = styled(Link)
-`
-    margin-top: 40%;
-    margin-left: 1%;
-    width: 85%;
-    position: relative;
-`
 
 function Logement() {
-    //On cree le usestate pour chaque partie
-    const [isClicked, setIsClicked] = useState(false)
-    const [isClicked2, setIsClicked2] = useState(false)
-    const [Description, setDescription] = useState(ARROW_BACK) 
-    const [Equipements, setEquipements] = useState(ARROW_BACK) 
-    const [count, setCount] = useState(0)
-    //On crée une fonction qui change le sens de la fleche au clic
+    const [isClicked, setIsClicked] = useState(false); // Dropdown description
+    const [isClicked2, setIsClicked2] = useState(false); // Dropdown équipements
+    const [Description, setDescription] = useState(ARROW_BACK);
+    const [Equipements, setEquipements] = useState(ARROW_BACK);
+    const [count, setCount] = useState(0);
+
     const toggleArrowDescription = () => {
-        setDescription(Description === ARROW_BACK ? ARROW_UP : ARROW_BACK)
-        console.log(detail.description)
-        setIsClicked(isClicked === true ? false : true)
-        console.log(isClicked)
-    }
+        setDescription(Description === ARROW_BACK ? ARROW_UP : ARROW_BACK);
+        setIsClicked(!isClicked);
+    };
 
     const toggleArrowEquipements = () => {
-        setEquipements(Equipements === ARROW_BACK ? ARROW_UP : ARROW_BACK)
-        console.log(Equipements)
-        setIsClicked(isClicked === true ? false : true)
-        console.log(isClicked)
-    }
-    //On crée une fonction pour mettre en place le caroussel
+        setEquipements(Equipements === ARROW_BACK ? ARROW_UP : ARROW_BACK);
+        setIsClicked2(!isClicked2);
+    };
+
     const NextImage = () => {
-        //On verifie que detail.picture existe bien et que sa longueur n'est pas null, sinon on affiche un message d'erreur
-        if (!detail || !detail.pictures || detail.pictures.length === 0) {
-            console.error("detail or detail.pictures is not defined or empty");
-            return;
-            //On verifie que le type de count est bien un entier, qu'il n'est pas inferieur a 0 et pas superieur a la taille du tableau
-        }    if (typeof count !== 'number' || count < 0 || count >= detail.pictures.length) {
-            console.error("count is out of bounds");
-            return;
-        }    console.log('Bonjour');
-        console.log(detail.pictures.length);
-        console.log(detail.pictures[count]);
-        //Si count est inferieur a la taille du tableau -1 on augmente le compteur de 1
-        console.log(count);    if (count < detail.pictures.length - 1) {
-            setCount(count + 1);
-        } else {
-            //Sinon on lui assigne la valeur 0
-            setCount(0);
+        if (detail.pictures && detail.pictures.length > 0) {
+            setCount((count + 1) % detail.pictures.length);
         }
     };
-    const PreviousImage = () => {
-        console.log('Au revoir')
-        setCount(count - 1)
-    }
 
-    //On crée un tableau vide
+    const PreviousImage = () => {
+        if (detail.pictures && detail.pictures.length > 0) {
+            setCount((count - 1 + detail.pictures.length) % detail.pictures.length);
+        }
+    };
+
     let detail = [];
-    //On recupère le localstorage 
-    var localS = JSON.parse(localStorage.getItem("items"));
     const questionNumber = useParams();
-    //Tant que i est inferieur a la taille du localstorage on l'incremente de 
-    for (let i = 0; i< localS.length; i++){
-        //On verifie que l'id selectionné précédement corresponde bien a celui trouvé dans le localstorage
-        if(questionNumber.id === localS[i].id){
-            //On enregistre les données de cet utilisateur dans detail
+    const localS = JSON.parse(localStorage.getItem('items') || '[]');
+
+    for (let i = 0; i < localS.length; i++) {
+        if (questionNumber.id === localS[i].id) {
             detail = localS[i];
-            console.log(detail)
         }
     }
-    const test = detail.pictures[count]
+
+    const test = detail.pictures ? detail.pictures[count] : null;
+
     return (
-        //On utilise les differentes données dans detail pour mettre la page logement a jour en fonction de l'utilisateur
-        <body>
-        <div className='principale'>
-            <Header></Header>
-            <div className='carroussel'> 
-            <div className='test' >
-            <img src={test}  class='logo' />
-            <img src={arrow_back}  Class='arrow_back' onClick={PreviousImage} />
-            <img src={arrow_forward}  Class='arrow_forward' onClick={NextImage} />
+        <div className="principale">
+            <Header />
+            <div className="carroussel">
+                <div className="test">
+                    <img src={test} alt="" className="logo" />
+                    <img src={arrow_back} alt="prev" className="arrow_back" onClick={PreviousImage} />
+                    <img src={arrow_forward} alt="next" className="arrow_forward" onClick={NextImage} />
+                </div>
+                <div className="title">
+                    {detail.title}
+                    <div className="host">
+                        {detail.host?.name} <img src={detail.host?.picture} alt="profil" className="profil" />
+                    </div>
+                    <div className="location">{detail.location}</div>
+                    <div className="Rates">
+                        {detail.rating === '1' ? (
+                            <img src={RATE1} alt="" className="rate" />
+                        ) : detail.rating === '2' ? (
+                            <img src={RATE2} alt="" className="rate" />
+                        ) : detail.rating === '3' ? (
+                            <img src={RATE3} alt="" className="rate" />
+                        ) : detail.rating === '4' ? (
+                            <img src={RATE4} alt="" className="rate" />
+                        ) : (
+                            <img src={RATE5} alt="" className="rate" />
+                        )}
+                    </div>
+                </div>
+                <div className="tags">
+                    {detail.tags?.map((item) => (
+                        <div className="item" key={item}>
+                            {item}
+                        </div>
+                    ))}
+                </div>
+                <div className="dropdown">
+                    <div className="description">
+                        Description{' '}
+                        <img
+                            src={Description}
+                            alt="arrow"
+                            className="arrow_back"
+                            onClick={toggleArrowDescription}
+                        />
+                        {isClicked && <div className="description_content">{detail.description}</div>}
+                    </div>
+                    <div className="equipements">
+                        Equipements{' '}
+                        <img
+                            src={Equipements}
+                            alt="arrow"
+                            className="arrow_back"
+                            onClick={toggleArrowEquipements}
+                        />
+                        {isClicked2 && (
+                            <div className="equipements_content">
+                                {detail.equipments?.map((equipement, index) => (
+                                    <ul key={index}>
+                                        <li className="Equipements_text">{equipement}</li>
+                                    </ul>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </div >
+            <div className={`footer-container ${isClicked || isClicked2 ? 'menu-open' : ''}`}>
+    <Footer />
             </div>
-            <div className='title'>{detail.title} 
-            <div className='host'>{detail.host.name}  <img src={detail.host.picture} alt="profil" class='profil'></img> 
-            </div>
-            <div className='location'>{detail.location}</div>
-            <div className='Rates'>
-            {detail.rating === "1" ? <img src={RATE1} alt="" ClassName='rate' />
-         : detail.rating === "2" ? <img src={RATE2} alt="" ClassName='rate' />
-         : detail.rating === "3" ? <img src={RATE3} alt="" ClassName='rate' />
-         : detail.rating === "4" ? <img src={RATE4} alt="" ClassName='rate' />
-         : <img src={RATE5} alt="" ClassName='rate' /> 
-    } </div> 
-    </div>
-    <div ClassName='tags'>
-            {detail.tags.map((item) => (
-                <div className='item'>{item} </div> 
-        ))} </div>
-        <div className='dropdown'>
-           <div className={isClicked ? 'classe-clic-description' : 'description'}> Description <img src={Description} alt="" ClassName='arrow_back'   onClick={toggleArrowDescription} /> 
-           { Description === ARROW_UP ?  <div className='description_content'> 
-            {detail.description}
         </div>
-           : console.log('au revoir') }
-              </div> 
-           <div className={isClicked ? 'classe-clic-equipements' : 'equipements'}> Equipements <img src={Equipements} alt="" ClassName='arrow_back' onClick={toggleArrowEquipements}/> 
-           { Equipements === ARROW_UP ?  <div className='equipements_content'> 
-            {detail.equipments.map((equipements) => (
-                <ul>
-                    <li className='Equipements_text'>{equipements}</li>
-                </ul>
-                
-            ))}
-        </div>
-           : console.log('au revoir') } </div> 
-            </div>
-        </div>
-       
-        </div>
-        <div className='container'>
-        <StyledLinkFooter> <Footer></Footer> </StyledLinkFooter>
-        </div>
-        </body>
-        
-    )
+    );
 }
 
-export default Logement
+export default Logement;

@@ -1,5 +1,5 @@
 Footer {
-    margin-top: 23%;
+    margin-top: 2%;
 }
 p {
     z-index: 1;
@@ -10,9 +10,6 @@ p {
 }
 .img-home {
     width: 100%;
-}
-.img-principale {
-    opacity: 30%;
 }
 img {
     filter: brightness(80%);
@@ -47,4 +44,7 @@ section {
     img {
         border-radius: 20px;
     }
+}
+.dimension {
+    width: 1240px;
 }

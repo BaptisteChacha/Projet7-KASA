@@ -58,7 +58,7 @@ function A_propos() {
 
 
     return (
-        <div>
+        <div className='container'>
             <Header></Header>
             <div className='menu_deroulant'>
                 

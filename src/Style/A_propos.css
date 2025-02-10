@@ -73,3 +73,6 @@
     -webkit-animation: slide 1s ease-in;
     animation: slide 1s ease-in;
 }
+.container {
+    width: 1240px;
+}
