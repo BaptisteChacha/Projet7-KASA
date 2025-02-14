@@ -61,3 +61,11 @@ nav {
 li {
     list-style: none;
 }
+@media (max-width: 320px) {
+    #divPrincipale {
+        display: flex;
+        place-content: space-between;
+        width: 320px;
+        flex-wrap: wrap;
+    }
+}

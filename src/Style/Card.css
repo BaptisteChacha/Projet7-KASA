@@ -4,21 +4,19 @@
     width: 1240px;
 }
 .card {
-    &:hover {
-        cursor: pointer;
-        .text {
-            padding-top: -5px;
-        }
-    }
+    flex: 1 1 calc(33.33% - 16px); /* 3 cartes par ligne sur écrans larges */
+    max-width: calc(33.33% - 16px);
+    box-sizing: border-box;
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 16px;
 }
 .card img {
-    border-radius: 10px;
-    width: 340px;
-    height: 340px;
-    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
     object-fit: cover;
-    margin-top: 56px;
-    left: 50px;
 }
 a {
     color: black;
@@ -57,9 +55,75 @@ li {
 }
 .list_card {
     display: flex;
-    flex-wrap: wrap;
-    background: #e9e9e9;
-    border-radius: 0.8rem;
-    width: 1240px;
-    padding-left: 0px;
+    flex-wrap: wrap; /* Permet aux cartes de revenir à la ligne */
+    gap: 16px; /* Espacement entre les cartes */
+    justify-content: center; /* Aligne les cartes au centre */
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 16px); /* 2 cartes par ligne */
+        max-width: calc(50% - 16px);
+    }
+    li {
+        width: 23rem;
+    }
+    .list_card {
+        margin: 0;
+        justify-content: start;
+        width: 100%;
+    }
+    .text {
+        width: 40%;
+        padding-left: 0;
+        margin-top: -16%;
+    }
+    #Cards {
+        width: 768px;
+    }
+    body {
+        width: 768px;
+    }
+}
+
+/* Écrans petits (mobiles) */
+@media (min-width: 320px) and (max-width: 425px) {
+    .card {
+        flex: 1 1 100%; /* 1 carte par ligne */
+        max-width: 100%;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .card {
+        max-width: calc(100%);
+        justify-content: space-between;
+        height: 100%;
+    }
+    .list_card {
+        justify-content: left;
+    }
+    .text {
+        padding-left: 0;
+        margin-top: -5%;
+    }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+    #Cards {
+        padding-top: 4%;
+        width: 1440px;
+    }
+    .card {
+        max-width: 100%;
+        height: 100%;
+    }
+    .text {
+        padding-left: 7px;
+        margin-top: -4%;
+        width: 373px;
+    }
+    .list_card {
+        justify-content: left;
+    }
 }

@@ -76,3 +76,80 @@
 .container {
     width: 1240px;
 }
+@media (min-width: 320px) and (max-width: 425px) {
+    .container {
+        width: 320px;
+    }
+    .fiabilité,
+    .respect,
+    .service,
+    .securité {
+        width: 100%;
+    }
+    .classe-clic {
+        width: 100%;
+    }
+    .texte_page_a_propos {
+        width: 100%;
+    }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+    .container {
+        width: 768px;
+    }
+    html {
+        width: 768px;
+    }
+    .fiabilité,
+    .respect,
+    .service,
+    .securité {
+        width: 100%;
+    }
+    .classe-clic {
+        width: 100%;
+    }
+    .texte_page_a_propos {
+        width: 100%;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        width: 1024px;
+    }
+    html {
+        width: 1024px;
+    }
+    .fiabilité,
+    .respect,
+    .service,
+    .securité {
+        width: 100%;
+    }
+    .classe-clic {
+        width: 100%;
+    }
+    .texte_page_a_propos {
+        width: 100%;
+    }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .container {
+        width: 1440px;
+    }
+    html {
+        width: 1440px;
+    }
+    .fiabilité,
+    .respect,
+    .service,
+    .securité {
+        width: 100%;
+    }
+    .classe-clic {
+        width: 100%;
+    }
+    .texte_page_a_propos {
+        width: 100%;
+    }
+}

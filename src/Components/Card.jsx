@@ -6,7 +6,7 @@ function Card () {
     var localS = JSON.parse(localStorage.getItem("items"));
     if (!localS || localS.length === 0) {
         console.error("LocalStorage 'items' is empty.");
-        fetch('https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json',)
+        fetch("/logements.json",)
             .then((response) => response.json()
             .then((response) => window.localStorage.setItem("items", JSON.stringify(response)))
             .then(console.log(localStorage))
@@ -15,7 +15,7 @@ function Card () {
     }
     console.log(localS)  
         if (localS === null) {
-             fetch('https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json', {
+             fetch("/logements.json", {
                 method: 'GET',
                 mode: 'cors', 
                 headers: {

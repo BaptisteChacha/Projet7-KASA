@@ -48,3 +48,136 @@ section {
 .dimension {
     width: 1240px;
 }
+@media (min-width: 320px) and (max-width: 425px) {
+    .container_img_header {
+        width: 320px;
+        height: 223px;
+        border-radius: 10px;
+        img {
+            border-radius: 20px;
+            width: 320px;
+            height: 223px;
+            padding-top: 10px;
+        }
+    }
+    body {
+        width: 320px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    html {
+        margin-left: 20px;
+    }
+    .dimension {
+        width: 320px;
+    }
+    #root {
+        width: 320px;
+    }
+    .section_principale {
+        width: 320px;
+    }
+    #divPrincipale {
+        width: 320px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #Cards {
+        width: 320px;
+    }
+    .Text-logo {
+        width: 320px;
+    }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+    .container_img_header {
+        width: 768px;
+        height: 223px;
+        border-radius: 10px;
+        img {
+            border-radius: 20px;
+            width: 768px;
+            height: 223px;
+            padding-top: 10px;
+        }
+    }
+    #divPrincipale {
+        width: 768px;
+    }
+    .dimension {
+        width: 768px;
+    }
+    .section_principale {
+        width: 768px;
+        padding-bottom: 5%;
+    }
+    body {
+        width: 768px;
+    }
+    #root {
+        width: 768px;
+    }
+    .list_card {
+        width: 768px;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    #divPrincipale {
+        width: 1024px;
+    }
+    .dimension {
+        width: 1024px;
+    }
+    .section_principale {
+        width: 1024px;
+    }
+    .container_img_header {
+        width: 1024px;
+        img {
+            width: 1024px;
+        }
+    }
+    body {
+        width: 1024px;
+    }
+    .list_card {
+        width: 1024px;
+        justify-content: space-between;
+    }
+    #Cards {
+        width: 1024px;
+    }
+    html {
+        width: 1024px;
+    }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .dimension {
+        width: 1440px;
+    }
+    .section_principale {
+        width: 1440px;
+    }
+    .container_img_header {
+        width: 1440px;
+        img {
+            width: 100%;
+        }
+    }
+    .list_card {
+        width: 1440px;
+    }
+    #divPrincipale {
+        width: 1440px;
+    }
+    body {
+        width: 1440px;
+    }
+    html {
+        width: 1440px;
+    }
+    #root {
+        width: 1440px;
+    }
+}

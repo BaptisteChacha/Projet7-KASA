@@ -9,3 +9,8 @@
 .divFooter img {
     padding-right: 1px;
 }
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .divFooter {
+        width: 1440px;
+    }
+}
