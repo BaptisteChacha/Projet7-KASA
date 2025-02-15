@@ -61,15 +61,24 @@ function Logement() {
             <div className="carroussel">
                 <div className="test">
                     <img src={test} alt="" className="logo" />
-                    <img src={arrow_back} alt="prev" className="arrow_back" onClick={PreviousImage} />
-                    <img src={arrow_forward} alt="next" className="arrow_forward" onClick={NextImage} />
+                    <img src={arrow_back} alt="prev" className="arrow_back_carroussel" onClick={PreviousImage} />
+                    <img src={arrow_forward} alt="next" className="arrow_forward_carroussel" onClick={NextImage} />
                 </div>
                 <div className="title">
                     {detail.title}
-                    <div className="host">
-                        {detail.host?.name} <img src={detail.host?.picture} alt="profil" className="profil" />
                     </div>
                     <div className="location">{detail.location}</div>
+                    <div className="tags">
+                    {detail.tags?.map((item) => (
+                        <div className="item" key={item}>
+                            {item}
+                        </div>
+                    ))}
+                </div>
+                <div className='Rates_and_host'>
+                    <div className="host">
+                       <div className='host_name'> {detail.host?.name} </div> <img src={detail.host?.picture} alt="profil" className="profil" />
+                    </div>
                     <div className="Rates">
                         {detail.rating === '1' ? (
                             <img src={RATE1} alt="" className="rate" />
@@ -83,14 +92,8 @@ function Logement() {
                             <img src={RATE5} alt="" className="rate" />
                         )}
                     </div>
-                </div>
-                <div className="tags">
-                    {detail.tags?.map((item) => (
-                        <div className="item" key={item}>
-                            {item}
-                        </div>
-                    ))}
-                </div>
+                    </div>
+                
                 <div className="dropdown">
                     <div className="description">
                         Description{' '}

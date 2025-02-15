@@ -42,7 +42,6 @@
     height: 25px;
     flex-shrink: 0;
     border-radius: 10px;
-    background: #ff6060;
     color: white;
     display: flex;
 }
@@ -139,6 +138,12 @@ html {
 .arrow_back {
     margin-left: -100%;
 }
+.arrow_forward_carroussel {
+    margin-left: 85%;
+}
+.arrow_back_carroussel {
+    margin-left: -100%;
+}
 .arrow_back2:hover {
     transform: rotate(180deg);
 }
@@ -153,7 +158,7 @@ html {
 }
 .description_content {
     padding-top: 5%;
-    width: 550px;
+    width: 100%;
     color: #ff6060;
     font-family: Montserrat;
     font-size: 18px;
@@ -223,14 +228,102 @@ html {
     transform: translateY(180px); /* Ajuste cette valeur selon la hauteur de ton menu */
 }
 @media (min-width: 320px) and (max-width: 425px) {
+    .arrow_forward_carroussel {
+        margin-left: 75%;
+        width: 24px;
+        height: 24px;
+        padding-top: 30%;
+    }
+    .arrow_back_carroussel {
+        padding-left: 8%;
+        width: 24px;
+        height: 24px;
+        padding-top: 30%;
+    }
+    .logo {
+        padding-top: 5%;
+    }
+    .arrow_forward {
+        margin-left: 45%;
+    }
+
+    .location {
+        padding-top: 5%;
+    }
+    .host {
+        padding-top: 9%;
+        display: flex;
+        width: 38%;
+    }
     body {
         width: 320px;
     }
     html {
         margin-left: 20px;
     }
+    .principale {
+        width: 320px;
+    }
+    .carroussel {
+        width: 320px;
+    }
+    .test {
+        width: 320px;
+    }
+    .title {
+        width: 320px;
+        font-size: 15px;
+    }
+    .tags {
+        width: 320px;
+        display: block;
+        padding-top: 1%;
+    }
+    .dropdown {
+        width: 320px;
+        display: block;
+        padding-top: 6%;
+    }
+    .description {
+        width: 320px;
+    }
+    .equipements {
+        width: 320px;
+        margin-left: 0;
+        margin-top: 7%;
+    }
+    .item {
+        width: 94px;
+    }
+    .Rates {
+        float: left;
+        width: 94px;
+        img {
+            margin-top: 3em;
+            width: 10em;
+        }
+    }
+    .Rates_and_host {
+        display: block;
+    }
 }
 @media (min-width: 426px) and (max-width: 768px) {
+    .principale {
+        width: 768px;
+    }
+    .carroussel {
+        width: 768px;
+    }
+    .test {
+        width: 768px;
+    }
+    .title {
+        width: 768px;
+    }
+    .dropdown {
+        width: 768px;
+        display: block;
+    }
     .card {
         flex: 1 1 calc(50% - 16px); /* 2 cartes par ligne */
         max-width: calc(100% - 16px);
@@ -252,11 +345,117 @@ html {
     body {
         width: 768px;
     }
+    html {
+        margin-left: 10px;
+    }
+    .Rates {
+        padding-top: 5em;
+    }
+    .host {
+        display: flex;
+    }
+    .host_name {
+        width: 93px;
+    }
+    .item {
+        margin-top: 50%;
+    }
+    .equipements {
+        margin-top: 1em;
+        margin-left: 0;
+    }
+    .description,
+    .equipements {
+        width: 100%;
+    }
+    .arrow_forward_carroussel {
+        margin-left: 75%;
+    }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
     body {
         width: 1024px;
     }
+    html {
+        margin-left: 10px;
+    }
+    .principale {
+        width: 1024px;
+    }
+    .carroussel {
+        width: 1024px;
+    }
+    .test {
+        width: 1024px;
+    }
+    .title {
+        width: 1024px;
+    }
+    .dropdown {
+        width: 1024px;
+    }
+    .description,
+    .equipements {
+        width: 47%;
+    }
+    .arrow_forward_carroussel {
+        margin-left: 82%;
+    }
+    .Rates_and_host {
+        padding-left: 50em;
+    }
+    .host_name {
+        padding-right: 1em;
+        padding-top: 1em;
+        img {
+            margin-left: 9em;
+        }
+    }
+    .host {
+        display: flex;
+    }
+    .item {
+        margin-top: 6em;
+    }
+    .Rates {
+        padding-bottom: 3em;
+    }
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
+    .principale {
+        width: 1440px;
+    }
+    .carroussel {
+        width: 1440px;
+    }
+    .test {
+        width: 1440px;
+    }
+    .dropdown {
+        width: 1440px;
+    }
+    .description,
+    .equipements {
+        padding-left: 2%;
+        width: 47%;
+    }
+    .Rates_and_host {
+        padding-left: 84em;
+    }
+    .host_name {
+        padding-right: 1em;
+        padding-top: 1em;
+        img {
+            margin-left: 9em;
+        }
+    }
+    .host {
+        display: flex;
+    }
+    .item {
+        margin-top: 6em;
+    }
+    .Rates {
+        padding-bottom: 3em;
+    }
 }

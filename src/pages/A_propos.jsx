@@ -2,12 +2,13 @@ import Header from '../Components/Header.jsx'
 import '../Style/Header.css';
 import ARROW_UP from '../Images/arrow_up.svg';
 import ARROW_BACK from '../Images/arrow_back.svg';
-import {useState} from "react"
+import {useState} from "react";
 import '../Style/A_propos.css';
 import Img2 from '../Images/IMG2.png'
 import Footer from '../Components/Footer.jsx';
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import Image_a_propos from '../Images/Image_a-propos.jpg';
 
 const StyledLinkFooter = styled(Link)
 `
@@ -60,6 +61,11 @@ function A_propos() {
     return (
         <div className='container'>
             <Header></Header>
+            <img
+                        src={Image_a_propos}
+                        alt=""
+                        className="Image_a_propos"
+                    />
             <div className='menu_deroulant'>
                 
            
