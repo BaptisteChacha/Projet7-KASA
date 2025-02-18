@@ -223,6 +223,7 @@ html {
 .footer-container {
     position: relative;
     transition: transform 0.3s ease-in-out; /* Animation fluide */
+    padding-bottom: 35%;
 }
 .footer-container.menu-open {
     transform: translateY(180px); /* Ajuste cette valeur selon la hauteur de ton menu */
