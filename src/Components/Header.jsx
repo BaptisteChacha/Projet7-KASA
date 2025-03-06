@@ -18,8 +18,8 @@ function Header() {
         <div id='divPrincipale' >
         <img src={LOGO} alt="" ClassName='logo' />
         <nav>
-            <StyledLink to="/">Accueil</StyledLink>
-            <StyledLink to="/A_Propos">A propos</StyledLink> 
+            <StyledLink className='accueil_link' to="/">Accueil</StyledLink>
+            <StyledLink className='a_propos_link' to="/A_Propos">A propos</StyledLink> 
         </nav>
         </div>
     )

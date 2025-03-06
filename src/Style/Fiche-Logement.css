@@ -1,3 +1,14 @@
+.Description_text,
+.Equipements_text {
+    color: #ff6060;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.6%;
+    -webkit-animation: slide 1s ease-in;
+    animation: slide 1s ease-in;
+}
 .carroussel {
     width: 1240px;
     height: 415px;
@@ -24,7 +35,6 @@
 }
 .host {
     color: #ff6060;
-    float: right;
     font-family: Montserrat;
     font-size: 18px;
     font-style: normal;
@@ -108,20 +118,6 @@ html {
     margin-top: 2%;
     margin-bottom: 7%;
 }
-
-.fiabilité,
-.respect,
-.service,
-.securité {
-    align-items: center;
-    border-radius: 5px;
-    margin-bottom: 2%;
-    width: 1023px;
-    height: 47px;
-    flex-shrink: 0;
-    background-color: #ff6060;
-    color: #ffffff;
-}
 .logo {
     height: 100%;
     width: 100%;
@@ -147,7 +143,7 @@ html {
 .arrow_back2:hover {
     transform: rotate(180deg);
 }
-.test {
+.logo_container {
     display: flex;
 }
 .arrow_back:hover {
@@ -167,6 +163,7 @@ html {
     line-height: 142.6%;
     animation: 3s ease-in 1s reverse both running slidein;
     padding-left: 0px;
+    margin-bottom: 20px; /* Ajuste la valeur selon tes besoins */
 }
 .equipements_content {
     background: #e9e9e9;
@@ -225,87 +222,155 @@ html {
     transition: transform 0.3s ease-in-out; /* Animation fluide */
     padding-bottom: 35%;
 }
-.footer-container.menu-open {
-    transform: translateY(180px); /* Ajuste cette valeur selon la hauteur de ton menu */
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espace entre les sections */
+    width: 100%;
 }
-@media (min-width: 320px) and (max-width: 425px) {
+.dropdown-section {
+    width: 100%;
+}
+.dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff6b6b;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.dropdown-content {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    color: #ff6060;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.6%;
+    animation: slide 1sease-in;
+}
+@media (min-width: 375px) and (max-width: 425px) {
+    .dropdown-section {
+        width: 335px;
+        height: 29px;
+        padding-top: 25px;
+        padding-left: 20px;
+    }
+    #root {
+        width: 100%;
+    }
     .arrow_forward_carroussel {
         margin-left: 75%;
         width: 24px;
-        height: 24px;
-        padding-top: 30%;
+        position: relative;
+        padding-top: 3%;
     }
     .arrow_back_carroussel {
         padding-left: 8%;
         width: 24px;
-        height: 24px;
-        padding-top: 30%;
+        position: relative;
+        padding-top: 3%;
     }
     .logo {
         padding-top: 5%;
+        width: 100%;
     }
     .arrow_forward {
         margin-left: 45%;
     }
-
     .location {
-        padding-top: 5%;
+        padding-top: 20px;
+        width: 323px;
+        height: 22px;
     }
     .host {
-        padding-top: 9%;
         display: flex;
-        width: 38%;
+        width: 135px;
+        padding-left: 219px;
+        height: 33px;
+    }
+    .dropdown-content {
+        width: 100%;
+        padding: 0;
+    }
+    .Description_text,
+    .Equipements_text {
+        width: 100%;
     }
     body {
-        width: 320px;
+        width: 100%;
     }
     html {
-        margin-left: 20px;
+        margin-left: 0px;
     }
     .principale {
-        width: 320px;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .carroussel {
-        width: 320px;
+        width: 100%;
     }
-    .test {
-        width: 320px;
+    .logo_container {
+        width: 100%;
     }
     .title {
-        width: 320px;
-        font-size: 15px;
+        width: 335px;
+        font-size: 18px;
     }
     .tags {
-        width: 320px;
+        width: 100%;
         display: block;
         padding-top: 1%;
     }
     .dropdown {
-        width: 320px;
+        width: 100%;
         display: block;
         padding-top: 6%;
     }
     .description {
-        width: 320px;
+        width: 100%;
     }
     .equipements {
-        width: 320px;
+        width: 100%;
         margin-left: 0;
         margin-top: 7%;
     }
     .item {
-        width: 94px;
+        width: 84px;
     }
     .Rates {
         float: left;
         width: 94px;
         img {
-            margin-top: 3em;
-            width: 10em;
+            width: 98px;
+            height: 18px;
+            padding-left: 20px;
         }
     }
     .Rates_and_host {
         display: block;
+    }
+    .profil {
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+        border-radius: 45%;
+    }
+    .footer-container {
+        position: relative;
+        transition: transform 0.3s ease-in-out; /* Animation fluide */
+        padding-bottom: 35%;
+        padding-top: 10%;
+    }
+    .menu-open {
+        padding-top: 80%;
     }
 }
 @media (min-width: 426px) and (max-width: 768px) {
@@ -315,7 +380,7 @@ html {
     .carroussel {
         width: 768px;
     }
-    .test {
+    .logo_container {
         width: 768px;
     }
     .title {
@@ -347,7 +412,7 @@ html {
         width: 768px;
     }
     html {
-        margin-left: 10px;
+        margin-left: 0px;
     }
     .Rates {
         padding-top: 5em;
@@ -386,7 +451,7 @@ html {
     .carroussel {
         width: 1024px;
     }
-    .test {
+    .logo_container {
         width: 1024px;
     }
     .title {
@@ -429,7 +494,7 @@ html {
     .carroussel {
         width: 1440px;
     }
-    .test {
+    .logo_container {
         width: 1440px;
     }
     .dropdown {

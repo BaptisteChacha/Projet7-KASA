@@ -49,6 +49,20 @@
         height: 50px;
     }
 }
+
+.fiabilité,
+.respect,
+.service,
+.securité {
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 2%;
+    width: 1023px;
+    height: 47px;
+    flex-shrink: 0;
+    background-color: #ff6060;
+    color: #ffffff;
+}
 .texte_page_a_propos {
     color: #ff6060;
     font-family: Montserrat;
@@ -62,17 +76,6 @@
     padding-top: 1%;
     padding-bottom: 1%;
 }
-.Description_text,
-.Equipements_text {
-    color: #ff6060;
-    font-family: Montserrat;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 142.6%;
-    -webkit-animation: slide 1s ease-in;
-    animation: slide 1s ease-in;
-}
 .container {
     width: 1240px;
 }
@@ -83,7 +86,24 @@
     left: 100px;
     object-fit: cover;
 }
-@media (min-width: 320px) and (max-width: 425px) {
+@media (min-width: 375px) and (max-width: 425px) {
+    .text_fiabilite,
+    .text_respect,
+    .text_securite,
+    .text_service {
+        padding-left: 11px;
+        font-size: 13px;
+        height: 19px;
+        padding-top: 5px;
+    }
+    .respect img,
+    .fiabilité img,
+    .service img,
+    .securité img {
+        width: 18px;
+        height: 18px;
+        padding-right: 10px;
+    }
     .container {
         width: 320px;
     }
@@ -92,12 +112,18 @@
     .service,
     .securité {
         width: 100%;
+        margin-left: 20px;
+        padding-left: 11px;
+        height: 30px;
     }
     .classe-clic {
-        width: 100%;
+        width: 335px;
+        margin-left: 20px;
+        height: 30px;
     }
     .texte_page_a_propos {
-        width: 100%;
+        width: 316px;
+        padding-left: 40px;
     }
     .Image_a_propos {
         width: 100%;
@@ -105,6 +131,7 @@
         left: 100px;
         object-fit: cover;
         border-radius: 30px;
+        padding-left: 20px;
     }
 }
 @media (min-width: 426px) and (max-width: 768px) {
@@ -163,6 +190,15 @@
     }
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
+    .text_fiabilite,
+    .text_respect,
+    .text_service,
+    .text_securite {
+        width: 97px;
+        height: 34px;
+        padding-top: 5px;
+        padding-left: 18px;
+    }
     .container {
         width: 1440px;
     }
@@ -173,13 +209,19 @@
     .respect,
     .service,
     .securité {
-        width: 100%;
+        width: 1023px;
+        height: 47px;
+        margin-left: 208px;
     }
     .classe-clic {
-        width: 100%;
+        width: 1023px;
+        height: 47px;
+        margin-left: 208px;
     }
     .texte_page_a_propos {
-        width: 100%;
+        width: 978px;
+        padding-left: 235px;
+        font-size: 24px;
     }
     .Image_a_propos {
         width: 100%;

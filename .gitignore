@@ -5,7 +5,7 @@
 /.pnp
 .pnp.js
 
-# testing
+# logo_containering
 /coverage
 
 # production
@@ -15,7 +15,7 @@
 .DS_Store
 .env.local
 .env.development.local
-.env.test.local
+.env.logo_container.local
 .env.production.local
 
 npm-debug.log*

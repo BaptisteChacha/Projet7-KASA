@@ -45,19 +45,21 @@ section {
 .dimension {
     width: 1240px;
 }
-@media (min-width: 320px) and (max-width: 425px) {
+@media (min-width: 375px) and (max-width: 425px) {
     Footer {
-        margin-top: 40%;
+        margin-top: 80%;
     }
     .container_img_header {
-        width: 320px;
-        height: 223px;
+        width: 335px;
+        height: 111px;
         border-radius: 10px;
+        padding-top: 83px;
         img {
             border-radius: 20px;
-            width: 320px;
-            height: 223px;
+            width: 335px;
+            height: 111px;
             padding-top: 10px;
+            object-fit: cover;
         }
     }
     body {
@@ -73,21 +75,20 @@ section {
         width: 320px;
     }
     #root {
-        width: 320px;
+        width: 100%;
     }
     .section_principale {
         width: 320px;
-    }
-    #divPrincipale {
-        width: 320px;
-        display: flex;
-        flex-wrap: wrap;
+        padding-left: 20px;
     }
     #Cards {
         width: 320px;
     }
     .Text-logo {
-        width: 320px;
+        width: 217px;
+        height: 48px;
+        padding-top: 114px;
+        padding-left: 36px;
     }
 }
 @media (min-width: 426px) and (max-width: 768px) {

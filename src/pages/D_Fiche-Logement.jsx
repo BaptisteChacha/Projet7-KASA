@@ -53,14 +53,14 @@ function Logement() {
         }
     }
 
-    const test = detail.pictures ? detail.pictures[count] : null;
+    const logo_container = detail.pictures ? detail.pictures[count] : null;
 
     return (
         <div className="principale">
             <Header />
             <div className="carroussel">
-                <div className="test">
-                    <img src={test} alt="" className="logo" />
+                <div className="logo_container">
+                    <img src={logo_container} alt="" className="logo" />
                     <img src={arrow_back} alt="prev" className="arrow_back_carroussel" onClick={PreviousImage} />
                     <img src={arrow_forward} alt="next" className="arrow_forward_carroussel" onClick={NextImage} />
                 </div>
@@ -94,36 +94,31 @@ function Logement() {
                     </div>
                     </div>
                 
-                <div className="dropdown">
-                    <div className="description">
-                        Description{' '}
-                        <img
-                            src={Description}
-                            alt="arrow"
-                            className="arrow_back"
-                            onClick={toggleArrowDescription}
-                        />
-                        {isClicked && <div className="description_content">{detail.description}</div>}
+                    <div className="dropdown">
+    <div className="dropdown-section">
+        <div className="dropdown-header" onClick={toggleArrowDescription}>
+            Description
+            <img src={Description} alt="arrow" className="arrow_back" />
+        </div>
+        {isClicked && <div className="dropdown-content">{detail.description}</div>}
+    </div>
+
+    <div className="dropdown-section">
+        <div className="dropdown-header" onClick={toggleArrowEquipements}>
+            Equipements
+            <img src={Equipements} alt="arrow" className="arrow_back" />
+        </div>
+        {isClicked2 && (
+            <div className="dropdown-content">
+                {detail.equipments?.map((equipement, index) => (
+                    <ul key={index}>
+                        <li className="Equipements_text">{equipement}</li>
+                    </ul>
+                ))}
+            </div>
+        )}
+    </div>
                     </div>
-                    <div className="equipements">
-                        Equipements{' '}
-                        <img
-                            src={Equipements}
-                            alt="arrow"
-                            className="arrow_back"
-                            onClick={toggleArrowEquipements}
-                        />
-                        {isClicked2 && (
-                            <div className="equipements_content">
-                                {detail.equipments?.map((equipement, index) => (
-                                    <ul key={index}>
-                                        <li className="Equipements_text">{equipement}</li>
-                                    </ul>
-                                ))}
-                            </div>
-                        )}
-                    </div>
-                </div>
             </div >
             <div className={`footer-container ${isClicked || isClicked2 ? 'menu-open' : ''}`}>
     <Footer />

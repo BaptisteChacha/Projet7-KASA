@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
+    "@logo_containering-library/jest-dom": "^5.17.0",
+    "@logo_containering-library/react": "^13.4.0",
+    "@logo_containering-library/user-event": "^13.5.0",
     "axios": "^1.7.7",
     "cors": "^2.8.5",
     "react": "^18.2.0",
@@ -21,7 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "logo_container": "react-scripts logo_container",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

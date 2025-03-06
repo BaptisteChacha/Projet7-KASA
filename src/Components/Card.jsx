@@ -36,11 +36,11 @@ function Card () {
     <ul className='list_card'>
         {localS.map((item) => (
             <li key={ item.id }>
-               <div Class='card'>
+               <div /*</li>Class='card'*/>
                <Link to={`/Logement/${item.id}`}>
                 <div Class='img-home'>
+                <div className='text'> {item.title} </div> 
                 <img Class='img_location' src= {item.cover} alt=""/> </div>
-                 <div className='text'> {item.title} </div> 
               </Link>
                 </div>
             </li>

@@ -1,12 +1,13 @@
 import Header from '../Components/Header.jsx'
 import '../Style/Header.css';
+import '../Style/Erreur.css';
 
 function Error() {
     return (
         <div>
             <Header></Header>
-            <p Class='erreur-404'> 404 </p>
-            <h1>Oups la page que vous demandez n'existe pas</h1>
+            <p className='erreur-404'> 404 </p>
+            <h1 className='erreur'>Oups la page que vous demandez n'existe pas</h1>
             <a href='http://localhost:3000/'> <p Class='retour-accueil'> Retour sur la page d'accueil </p> </a>
         </div>
     )

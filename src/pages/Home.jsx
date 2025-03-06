@@ -57,8 +57,7 @@ function Home() {
                 </div>
             </section>
             <Card></Card>
-            
-            {/* Place le Footer ici */}
+          
             <Footer />
         </div>
     );
