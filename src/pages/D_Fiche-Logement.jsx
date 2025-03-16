@@ -14,6 +14,7 @@ import RATE3 from '../Images/RATE3.svg';
 import RATE4 from '../Images/RATE4.svg';
 import RATE5 from '../Images/RATE5.svg';
 
+
 function Logement() {
     const [isClicked, setIsClicked] = useState(false); // Dropdown description
     const [isClicked2, setIsClicked2] = useState(false); // Dropdown équipements
