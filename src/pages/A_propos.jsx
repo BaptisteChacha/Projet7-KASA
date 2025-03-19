@@ -4,18 +4,10 @@ import ARROW_UP from '../Images/arrow_up.svg';
 import ARROW_BACK from '../Images/arrow_back.svg';
 import {useState} from "react";
 import '../Style/A_propos.css';
-import Img2 from '../Images/IMG2.png'
 import Footer from '../Components/Footer.jsx';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
 import Image_a_propos from '../Images/Image_a-propos.jpg';
 
-const StyledLinkFooter = styled(Link)
-`
-    margin-top: 48%;
-    margin-left: 1%;
-    width: 100%
-`
+
 
 function A_propos() {
     
@@ -26,36 +18,25 @@ function A_propos() {
     
 
     const toggleArrowInfoFiabilite = () => {
-        setInfoFiabilite(InfoFiabilite === ARROW_BACK ? ARROW_UP : ARROW_BACK)
-        console.log(InfoFiabilite)    
-        setIsClicked(isClicked === true ? false : true)
-        console.log(isClicked)    
+        setInfoFiabilite(InfoFiabilite === ARROW_BACK ? ARROW_UP : ARROW_BACK)  
+        setIsClicked(isClicked === true ? false : true)  
     } 
     const toggleArrowInfoRespect = () => {
         setInfoRespect(InfoRespect === ARROW_BACK ? ARROW_UP : ARROW_BACK)
-        console.log(InfoRespect)
         setIsClicked(isClicked === true ? false : true)
-        console.log(isClicked)
     } 
     const toggleArrowInfoSecurite = () => {
         setInfoSecurite(InfoSecurite === ARROW_BACK ? ARROW_UP : ARROW_BACK)
-        console.log(InfoSecurite)
         setIsClicked(isClicked === true ? false : true)
-        console.log(isClicked)
     } 
     const toggleArrowInfoService = () => {
         setInfoService(InfoService === ARROW_BACK ? ARROW_UP : ARROW_BACK)
-        console.log(InfoService)
         setIsClicked(isClicked === true ? false : true)
-        console.log(isClicked)
     } 
     
 
 
     const [isClicked, setIsClicked] = useState(false)
-  /*  const click =() => {
-        setIsClicked(isClicked == true ? false : true)
-    }*/
 
 
     return (

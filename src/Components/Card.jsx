@@ -9,11 +9,9 @@ function Card () {
         fetch("/logements.json",)
             .then((response) => response.json()
             .then((response) => window.localStorage.setItem("items", JSON.stringify(response)))
-            .then(console.log(localStorage))
             .catch((error) => console.log(error))
     )
     }
-    console.log(localS)  
         if (localS === null) {
              fetch("/logements.json", {
                 method: 'GET',
@@ -25,7 +23,6 @@ function Card () {
             .then(response => response.json())  
             .then(data => {
                 window.localStorage.setItem("items", JSON.stringify(data));  
-                console.log(localStorage.getItem("items"));  
             })
             .catch(error => console.log(error));  
         

@@ -39,7 +39,6 @@ function Home() {
             .catch((error) => console.log(error));
     }
 
-    console.log(localS);
     {localS && localS.map((item) => console.log(item))}
 
     return (
