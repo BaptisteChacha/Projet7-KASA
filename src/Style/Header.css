@@ -46,16 +46,17 @@ li {
         height: 47px;
         display: flex;
         flex-wrap: nowrap;
-        padding-left: 20px;
         padding-top: 20px;
+        padding-left: 20px;
         a {
-            width: 59px;
+            width: 145px;
             height: 17px;
             font-size: 13px;
         }
     }
     nav {
         padding-top: 18px;
+        padding-left: 15px;
         width: 140px;
         height: 17px;
         flex-shrink: 0;

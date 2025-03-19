@@ -97,8 +97,8 @@ li {
         z-index: 10;
         width: 259px;
         height: 52px;
-        padding-left: 19px;
-        padding-top: 188px;
+        padding-left: 25px;
+        padding-top: 205px;
     }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -129,7 +129,7 @@ li {
         }
     }
     .text {
-        padding-left: 20px;
+        padding-left: 30px;
         padding-top: 205px;
         width: 373px;
         z-index: 1;
