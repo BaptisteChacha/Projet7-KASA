@@ -14,7 +14,6 @@ import RATE3 from '../Images/RATE3.svg';
 import RATE4 from '../Images/RATE4.svg';
 import RATE5 from '../Images/RATE5.svg';
 
-
 function Logement() {
     const [isClicked, setIsClicked] = useState(false); // Dropdown description
     const [isClicked2, setIsClicked2] = useState(false); // Dropdown équipements
@@ -32,8 +31,12 @@ function Logement() {
         setIsClicked2(!isClicked2);
     };
 
+    // Fonction pour afficher l'image suivante dans le carrousel
     const NextImage = () => {
+        // On vérifie d'abord qu'il y a bien des images dans 'detail.pictures'
         if (detail.pictures && detail.pictures.length > 0) {
+            // On incrémente 'count' pour passer à l'image suivante
+            // Le modulo (%) permet de revenir à la première image quand on atteint la dernière
             setCount((count + 1) % detail.pictures.length);
         }
     };
@@ -45,10 +48,16 @@ function Logement() {
     };
 
     let detail = [];
+    // 'questionNumber' récupère les paramètres de l'URL, ici l'id du logement
     const questionNumber = useParams();
+
+    // On récupère les données stockées dans le localStorage sous la clé 'items'
+    // Si les données ne sont pas présentes, on renvoie un tableau vide
     const localS = JSON.parse(localStorage.getItem('items') || '[]');
 
+    // On boucle à travers chaque élément dans 'localS' pour trouver le logement correspondant à l'id dans l'URL
     for (let i = 0; i < localS.length; i++) {
+        // Si l'id du logement dans l'URL correspond à l'id d'un logement dans 'localS', on récupère ses détails
         if (questionNumber.id === localS[i].id) {
             detail = localS[i];
         }
@@ -65,11 +74,9 @@ function Logement() {
                     <img src={arrow_back} alt="prev" className="arrow_back_carroussel" onClick={PreviousImage} />
                     <img src={arrow_forward} alt="next" className="arrow_forward_carroussel" onClick={NextImage} />
                 </div>
-                <div className="title">
-                    {detail.title}
-                    </div>
-                    <div className="location">{detail.location}</div>
-                    <div className="tags">
+                <div className="title">{detail.title}</div>
+                <div className="location">{detail.location}</div>
+                <div className="tags">
                     {detail.tags?.map((item) => (
                         <div className="item" key={item}>
                             {item}
@@ -78,7 +85,8 @@ function Logement() {
                 </div>
                 <div className='Rates_and_host'>
                     <div className="host">
-                       <div className='host_name'> {detail.host?.name} </div> <img src={detail.host?.picture} alt="profil" className="profil" />
+                        <div className='host_name'> {detail.host?.name} </div>
+                        <img src={detail.host?.picture} alt="profil" className="profil" />
                     </div>
                     <div className="Rates">
                         {detail.rating === '1' ? (
@@ -93,37 +101,35 @@ function Logement() {
                             <img src={RATE5} alt="" className="rate" />
                         )}
                     </div>
-                    </div>
-                
-                    <div className="dropdown">
-    <div className="dropdown-section">
-        <div className="dropdown-header" onClick={toggleArrowDescription}>
-            Description
-            <img src={Description} alt="arrow" className="arrow_back" />
-        </div>
-        {isClicked && <div className="dropdown-content">{detail.description}</div>}
-    </div>
+                </div>
 
-    <div className="dropdown-section">
-        <div className="dropdown-header" onClick={toggleArrowEquipements}>
-            Equipements
-            <img src={Equipements} alt="arrow" className="arrow_back" />
-        </div>
-        {isClicked2 && (
-            <div className="dropdown-content">
-                {detail.equipments?.map((equipement, index) => (
-                    <ul key={index}>
-                        <li className="Equipements_text">{equipement}</li>
-                    </ul>
-                ))}
-            </div>
-        )}
-    </div>
+                <div className="dropdown">
+                    <div className="dropdown-section">
+                        <div className="dropdown-header" onClick={toggleArrowDescription}>
+                            Description
+                            <img src={Description} alt="arrow" className="arrow_back" />
+                        </div>
+                        {isClicked && <div className="dropdown-content">{detail.description}</div>}
                     </div>
-            </div >
-            <div className={`footer-container ${isClicked || isClicked2 ? 'menu-open' : ''}`}>
-    <Footer />
+
+                    <div className="dropdown-section">
+                        <div className="dropdown-header" onClick={toggleArrowEquipements}>
+                            Equipements
+                            <img src={Equipements} alt="arrow" className="arrow_back" />
+                        </div>
+                        {isClicked2 && (
+                            <div className="dropdown-content">
+                                {detail.equipments?.map((equipement, index) => (
+                                    <ul key={index}>
+                                        <li className="Equipements_text">{equipement}</li>
+                                    </ul>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                </div>
             </div>
+            <Footer />
         </div>
     );
 }

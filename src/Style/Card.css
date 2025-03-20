@@ -64,24 +64,6 @@ li {
     margin: 0 auto;
     width: 100%;
 }
-@media (max-width: 768px) {
-    .card {
-        flex: 1 1 calc(50% - 16px); /* 2 cartes par ligne */
-        max-width: calc(50% - 16px);
-    }
-    li {
-        width: 23rem;
-    }
-    .list_card {
-        margin: 0;
-        justify-content: start;
-        width: 100%;
-    }
-    .text {
-        width: 40%;
-        padding-left: 0;
-    }
-}
 
 /* Écrans petits (mobiles) */
 @media (min-width: 375px) and (max-width: 425px) {
@@ -92,6 +74,11 @@ li {
             width: 335px;
             height: 255px;
         }
+    }
+    .list_card {
+        margin: 0;
+        justify-content: start;
+        width: 100%;
     }
     .text {
         z-index: 10;

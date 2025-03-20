@@ -8,15 +8,10 @@ import { useState } from 'react';
 
 function Home() {
     useState(() => {
-        fetch(
-            "/logements.json"
-        )
+        fetch("/logements.json")
             .then((response) =>
                 response.json().then((response) =>
-                    window.localStorage.setItem(
-                        'items',
-                        JSON.stringify(response)
-                    )
+                    window.localStorage.setItem('items', JSON.stringify(response))
                 )
             )
             .catch((error) => console.log(error));
@@ -25,25 +20,20 @@ function Home() {
     var localS = JSON.parse(localStorage.getItem('items'));
     if (!localS || localS.length === 0) {
         console.error('Erreur');
-        fetch(
-            "/logements.json"
-        )
+        fetch("/logements.json")
             .then((response) =>
                 response.json().then((response) =>
-                    window.localStorage.setItem(
-                        'items',
-                        JSON.stringify(response)
-                    )
+                    window.localStorage.setItem('items', JSON.stringify(response))
                 )
             )
             .catch((error) => console.log(error));
     }
 
-    localS && localS.map((item) => console.log(item))
+    localS && localS.map((item) => console.log(item));
 
     return (
         <div className="dimension">
-            <Header></Header>
+            <Header />
 
             <section className="section_principale">
                 <p className="Text-logo">Chez vous, partout et ailleurs</p>
@@ -55,8 +45,9 @@ function Home() {
                     />
                 </div>
             </section>
-            <Card></Card>
-          
+
+            <Card />
+
             <Footer />
         </div>
     );

@@ -13,7 +13,7 @@
     font-size: 288px;
     font-style: normal;
     font-weight: 700;
-    line-height: 142.6%; /* 410.688px */
+    line-height: 142.6%;
 }
 .erreur {
     color: #ff6060;
@@ -37,7 +37,7 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
-    line-height: 142.6%; /* 25.668px */
+    line-height: 142.6%;
     text-decoration-line: underline;
 }
 @media (min-width: 375px) and (max-width: 425px) {
