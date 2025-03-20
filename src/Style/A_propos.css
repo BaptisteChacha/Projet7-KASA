@@ -105,13 +105,13 @@
         padding-right: 10px;
     }
     .container {
-        width: 320px;
+        width: 375px;
     }
     .fiabilité,
     .respect,
     .service,
     .securité {
-        width: 100%;
+        width: 335px;
         margin-left: 20px;
         padding-left: 11px;
         height: 30px;
@@ -131,7 +131,7 @@
         padding-left: 40px;
     }
     .Image_a_propos {
-        width: 100%;
+        width: 336px;
         padding-top: 5%;
         left: 100px;
         object-fit: cover;

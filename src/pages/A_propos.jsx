@@ -11,7 +11,7 @@ import Image_a_propos from '../Images/Image_a-propos.jpg';
 
 function A_propos() {
     
-    let [InfoFiabilite, setInfoFiabilite] = useState(ARROW_BACK) 
+    const [InfoFiabilite, setInfoFiabilite] = useState(ARROW_BACK) 
     const [InfoRespect, setInfoRespect] = useState(ARROW_BACK) 
     const [InfoSecurite, setInfoSecurite] = useState(ARROW_BACK) 
     const [InfoService, setInfoService] = useState(ARROW_BACK) 

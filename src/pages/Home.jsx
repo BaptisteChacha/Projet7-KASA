@@ -39,7 +39,7 @@ function Home() {
             .catch((error) => console.log(error));
     }
 
-    {localS && localS.map((item) => console.log(item))}
+    localS && localS.map((item) => console.log(item))
 
     return (
         <div className="dimension">
