@@ -46,9 +46,6 @@ section {
     width: 1240px;
 }
 @media (min-width: 375px) and (max-width: 425px) {
-    Footer {
-        margin-top: 80%;
-    }
     .container_img_header {
         width: 335px;
         height: 111px;
@@ -60,6 +57,7 @@ section {
             height: 111px;
             padding-top: 10px;
             object-fit: cover;
+            margin-left: 20px;
         }
     }
     body {
@@ -68,9 +66,7 @@ section {
         display: flex;
         flex-direction: column;
     }
-    html {
-        margin-left: 20px;
-    }
+
     .dimension {
         width: 375px;
     }
@@ -79,7 +75,6 @@ section {
     }
     .section_principale {
         width: 320px;
-        padding-left: 20px;
     }
     #Cards {
         width: 320px;

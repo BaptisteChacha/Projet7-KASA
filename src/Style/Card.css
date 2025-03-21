@@ -36,7 +36,6 @@ li {
 .img_location {
     width: 335px;
     height: 255px;
-    margin-left: 21px;
     position: relative;
     border-radius: 10px;
 }
@@ -67,6 +66,9 @@ li {
 
 /* Écrans petits (mobiles) */
 @media (min-width: 375px) and (max-width: 425px) {
+    .img_location {
+        margin-left: 20px;
+    }
     .card {
         flex: 1 1 100%; /* 1 carte par ligne */
         max-width: 100%;

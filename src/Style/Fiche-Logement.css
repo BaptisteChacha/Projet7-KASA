@@ -114,7 +114,6 @@ body {
 }
 html {
     height: 100%;
-    margin-left: 50px;
     margin-top: 2%;
     margin-bottom: 7%;
 }
@@ -260,23 +259,23 @@ html {
         width: 335px;
         height: auto;
         padding-top: 25px;
-        padding-left: 20px;
     }
     .arrow_forward_carroussel {
-        margin-left: 75%;
+        margin-left: 85%;
         width: 24px;
         position: relative;
         padding-top: 3%;
     }
     .arrow_back_carroussel {
-        padding-left: 8%;
         width: 24px;
         position: relative;
         padding-top: 3%;
     }
     .logo {
         padding-top: 5%;
-        width: 100%;
+        width: 335px;
+        height: 255px;
+        object-fit: cover;
     }
     .arrow_forward {
         margin-left: 45%;
@@ -289,7 +288,7 @@ html {
     .host {
         display: flex;
         width: 135px;
-        padding-left: 219px;
+        padding-left: 200px;
         height: 33px;
     }
     .dropdown-content {
@@ -303,14 +302,12 @@ html {
     body {
         width: 100%;
     }
-    html {
-        margin-left: 0px;
-    }
     .principale {
         width: 100%;
     }
     .carroussel {
-        width: 100%;
+        width: 335px;
+        padding-left: 20px;
     }
     .logo_container {
         width: 100%;
@@ -320,7 +317,7 @@ html {
         font-size: 18px;
     }
     .tags {
-        width: 100%;
+        width: 335px;
         display: block;
         padding-top: 1%;
     }
@@ -346,7 +343,6 @@ html {
         img {
             width: 98px;
             height: 18px;
-            padding-left: 20px;
         }
     }
     .Rates_and_host {
@@ -436,9 +432,6 @@ html {
 @media (min-width: 769px) and (max-width: 1024px) {
     body {
         width: 1024px;
-    }
-    html {
-        margin-left: 10px;
     }
     .principale {
         width: 1024px;
