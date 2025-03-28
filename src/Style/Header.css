@@ -1,3 +1,13 @@
+.accueil_link,
+.a_propos_link {
+    display: flex;
+    width: 1240px;
+    height: 68px;
+    justify-content: center;
+    align-items: right;
+    gap: 720.678px;
+    color: #ff6060;
+}
 nav {
     width: 309px;
     height: 34px;
@@ -56,7 +66,6 @@ li {
     }
     nav {
         padding-top: 18px;
-
         width: 140px;
         height: 17px;
         flex-shrink: 0;

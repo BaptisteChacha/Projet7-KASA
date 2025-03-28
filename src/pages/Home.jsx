@@ -17,7 +17,7 @@ function Home() {
             .catch((error) => console.log(error));
     }, []);
 
-    var localS = JSON.parse(localStorage.getItem('items'));
+    let localS = JSON.parse(localStorage.getItem('items'));
     if (!localS || localS.length === 0) {
         console.error('Erreur');
         fetch("/logements.json")

@@ -8,6 +8,11 @@
 .divFooter img {
     padding-right: 1px;
 }
+@media (min-width: 375px) and (max-width: 425px) {
+    .divFooter {
+        margin-top: 15px;
+    }
+}
 @media (min-width: 426px) and (max-width: 768px) {
     .divFooter {
         width: 768px;

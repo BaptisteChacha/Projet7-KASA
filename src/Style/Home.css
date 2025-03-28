@@ -1,3 +1,6 @@
+html {
+    margin-left: 20px;
+}
 p {
     z-index: 1;
     position: absolute;
@@ -85,6 +88,9 @@ section {
         padding-top: 70px;
         padding-left: 36px;
     }
+    html {
+        max-width: 375px;
+    }
 }
 @media (min-width: 426px) and (max-width: 768px) {
     .container_img_header {
@@ -117,6 +123,9 @@ section {
     .list_card {
         width: 768px;
     }
+    html {
+        max-width: 768px;
+    }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
     #divPrincipale {
@@ -145,7 +154,7 @@ section {
         width: 1024px;
     }
     html {
-        width: 1024px;
+        max-width: 1024px;
     }
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
@@ -174,7 +183,7 @@ section {
         width: 1440px;
     }
     html {
-        width: 1440px;
+        max-width: 1440px;
     }
     #root {
         width: 1440px;

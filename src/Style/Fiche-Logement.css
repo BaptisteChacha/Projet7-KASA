@@ -230,7 +230,7 @@ html {
 .dropdown-section {
     width: 100%;
 }
-.dropdown-header {
+.collapse-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -241,7 +241,7 @@ html {
     border-radius: 5px;
     cursor: pointer;
 }
-.dropdown-content {
+.collapse-content {
     background-color: #fff;
     padding: 10px;
     border-radius: 5px;
@@ -255,6 +255,20 @@ html {
     animation: slide 1s ease-in;
 }
 @media (min-width: 375px) and (max-width: 425px) {
+    .arrow {
+        width: 18px;
+        height: 18px;
+    }
+    .collapse-header {
+        margin-top: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+        max-width: 335px;
+    }
+    .collapse-content {
+        margin-left: 20px;
+        max-width: 335px;
+    }
     .dropdown-section {
         width: 335px;
         height: auto;
@@ -401,9 +415,6 @@ html {
     }
     body {
         width: 768px;
-    }
-    html {
-        margin-left: 0px;
     }
     .Rates {
         padding-top: 5em;
