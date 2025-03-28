@@ -80,3 +80,9 @@ li {
         height: 17px;
     }
 }
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .arrow {
+        width: 32px;
+        height: 32px;
+    }
+}

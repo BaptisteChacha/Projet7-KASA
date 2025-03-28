@@ -205,10 +205,10 @@
         padding-left: 18px;
     }
     .container {
-        width: 1440px;
+        max-width: 1240px;
     }
     html {
-        width: 1440px;
+        width: 1240px;
     }
     .fiabilité,
     .respect,

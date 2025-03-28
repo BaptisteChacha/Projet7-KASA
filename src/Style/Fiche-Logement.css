@@ -1,3 +1,13 @@
+.stars {
+    display: flex;
+    gap: 5px; /* Espace entre les étoiles */
+}
+
+.rate {
+    width: 20px;
+    height: 20px;
+}
+
 .Description_text,
 .Equipements_text {
     color: #ff6060;
@@ -134,7 +144,7 @@ html {
     margin-left: -100%;
 }
 .arrow_forward_carroussel {
-    margin-left: 85%;
+    margin-left: 73%;
 }
 .arrow_back_carroussel {
     margin-left: -100%;
@@ -421,6 +431,10 @@ html {
     }
     .host {
         display: flex;
+        float: right;
+    }
+    .rate {
+        padding-left: 70%;
     }
     .host_name {
         width: 93px;
@@ -488,16 +502,16 @@ html {
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
     .principale {
-        width: 1440px;
+        width: 1240px;
     }
     .carroussel {
-        width: 1440px;
+        width: 1240px;
     }
     .logo_container {
-        width: 1440px;
+        width: 1240px;
     }
     .dropdown {
-        width: 1440px;
+        width: 1240px;
         flex-direction: row;
     }
     .description,
@@ -506,7 +520,7 @@ html {
         width: 47%;
     }
     .Rates_and_host {
-        padding-left: 80em;
+        padding-left: 90%;
     }
     .host_name {
         padding-right: 1em;
@@ -523,5 +537,12 @@ html {
     }
     .Rates {
         padding-bottom: 3em;
+    }
+    html {
+        max-width: 1240px;
+        margin-left: 70px;
+    }
+    .arrow_forward_carroussel {
+        margin-left: 83%;
     }
 }

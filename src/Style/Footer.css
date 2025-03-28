@@ -13,18 +13,8 @@
         margin-top: 15px;
     }
 }
-@media (min-width: 426px) and (max-width: 768px) {
-    .divFooter {
-        width: 768px;
-    }
-}
 @media (min-width: 769px) and (max-width: 1024px) {
     .divFooter {
         width: 1024px;
-    }
-}
-@media (min-width: 1025px) and (max-width: 1440px) {
-    .divFooter {
-        width: 1440px;
     }
 }

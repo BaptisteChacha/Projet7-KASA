@@ -1,6 +1,3 @@
-html {
-    margin-left: 20px;
-}
 p {
     z-index: 1;
     position: absolute;
@@ -93,6 +90,10 @@ section {
     }
 }
 @media (min-width: 426px) and (max-width: 768px) {
+    html {
+        width: 375px;
+        margin-left: 30px;
+    }
     .container_img_header {
         width: 768px;
         height: 223px;
@@ -155,37 +156,5 @@ section {
     }
     html {
         max-width: 1024px;
-    }
-}
-@media (min-width: 1025px) and (max-width: 1440px) {
-    Footer {
-        margin-top: 10%;
-    }
-    .dimension {
-        width: 1440px;
-    }
-    .section_principale {
-        width: 1440px;
-    }
-    .container_img_header {
-        width: 1440px;
-        img {
-            width: 100%;
-        }
-    }
-    .list_card {
-        width: 1440px;
-    }
-    #divPrincipale {
-        width: 1440px;
-    }
-    body {
-        width: 1440px;
-    }
-    html {
-        max-width: 1440px;
-    }
-    #root {
-        width: 1440px;
     }
 }

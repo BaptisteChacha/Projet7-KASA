@@ -4,32 +4,21 @@ import img from '../Images/IMG.png';
 import '../Style/Header.css';
 import Footer from '../Components/Footer.jsx';
 import '../Style/Home.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Home() {
-    useState(() => {
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        // Récupérer les données depuis logements.json
         fetch("/logements.json")
-            .then((response) =>
-                response.json().then((response) =>
-                    window.localStorage.setItem('items', JSON.stringify(response))
-                )
-            )
+            .then((response) => response.json())
+            .then((data) => setItems(data))
             .catch((error) => console.log(error));
     }, []);
 
-    let localS = JSON.parse(localStorage.getItem('items'));
-    if (!localS || localS.length === 0) {
-        console.error('Erreur');
-        fetch("/logements.json")
-            .then((response) =>
-                response.json().then((response) =>
-                    window.localStorage.setItem('items', JSON.stringify(response))
-                )
-            )
-            .catch((error) => console.log(error));
-    }
-
-    localS && localS.map((item) => console.log(item));
+    // Log des items dans la console pour vérification
+    items.map((item) => console.log(item));
 
     return (
         <div className="dimension">
@@ -46,7 +35,8 @@ function Home() {
                 </div>
             </section>
 
-            <Card />
+            {/* On passe les items récupérés à Card en tant que prop */}
+            <Card items={items} />
 
             <Footer />
         </div>

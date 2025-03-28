@@ -8,11 +8,8 @@ import Footer from '../Components/Footer.jsx';
 import Collapse from '../Components/Collapse'; // Importation du composant Collapse
 import arrow_forward from '../Images/arrow_forward.svg';
 import arrow_back from '../Images/arrow_back_ios-24px 1.svg';
-import RATE1 from '../Images/RATE1.svg';
-import RATE2 from '../Images/RATE2.svg';
-import RATE3 from '../Images/RATE3.svg';
-import RATE4 from '../Images/RATE4.svg';
-import RATE5 from '../Images/RATE5.svg';
+import FULL_STAR from '../Images/full_star.svg'; // Importer les étoiles
+import EMPTY_STAR from '../Images/empty_star.svg'; // Importer l'étoile vide
 
 function Logement() {
     const { id } = useParams(); // Récupère l'ID du logement
@@ -61,6 +58,19 @@ function Logement() {
 
     const logo_container = logement.pictures ? logement.pictures[count] : null; // Image à afficher
 
+    // Créer les étoiles en fonction de la note
+    const renderStars = (rating) => {
+        const stars = [];
+        for (let i = 1; i <= 5; i++) {
+            if (i <= rating) {
+                stars.push(<img key={i} src={FULL_STAR} alt="full star" className="rate" />);
+            } else {
+                stars.push(<img key={i} src={EMPTY_STAR} alt="empty star" className="rate" />);
+            }
+        }
+        return stars;
+    };
+
     return (
         <div className="principale">
             <Header />
@@ -104,17 +114,10 @@ function Logement() {
                     </div>
 
                     <div className="Rates">
-                        {logement.rating === '1' ? (
-                            <img src={RATE1} alt="rate" className="rate" />
-                        ) : logement.rating === '2' ? (
-                            <img src={RATE2} alt="rate" className="rate" />
-                        ) : logement.rating === '3' ? (
-                            <img src={RATE3} alt="rate" className="rate" />
-                        ) : logement.rating === '4' ? (
-                            <img src={RATE4} alt="rate" className="rate" />
-                        ) : (
-                            <img src={RATE5} alt="rate" className="rate" />
-                        )}
+                        {/* Afficher les étoiles en fonction de la note */}
+                        <div className="stars">
+                            {renderStars(parseInt(logement.rating))}
+                        </div>
                     </div>
                 </div>
             </div>
