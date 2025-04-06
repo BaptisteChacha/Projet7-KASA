@@ -7,7 +7,6 @@
     width: 20px;
     height: 20px;
 }
-
 .Description_text,
 .Equipements_text {
     color: #ff6060;
@@ -314,6 +313,7 @@ html {
         width: 135px;
         padding-left: 200px;
         height: 33px;
+        padding-bottom: 10px;
     }
     .dropdown-content {
         width: 100%;
@@ -427,14 +427,11 @@ html {
         width: 768px;
     }
     .Rates {
-        padding-top: 5em;
+        padding-left: 600px;
     }
     .host {
         display: flex;
         float: right;
-    }
-    .rate {
-        padding-left: 70%;
     }
     .host_name {
         width: 93px;
@@ -452,6 +449,9 @@ html {
     }
     .arrow_forward_carroussel {
         margin-left: 75%;
+    }
+    .collapse-container {
+        padding-bottom: 1%;
     }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -520,7 +520,7 @@ html {
         width: 47%;
     }
     .Rates_and_host {
-        padding-left: 90%;
+        padding-left: 87%;
     }
     .host_name {
         padding-right: 1em;
