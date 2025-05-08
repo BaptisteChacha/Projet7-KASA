@@ -263,7 +263,7 @@ html {
     line-height: 142.6%;
     animation: slide 1s ease-in;
 }
-@media (min-width: 375px) and (max-width: 425px) {
+@media (min-width: 320px) and (max-width: 374px) {
     .arrow {
         width: 18px;
         height: 18px;
@@ -273,6 +273,135 @@ html {
         margin-left: 20px;
         margin-right: 20px;
         max-width: 335px;
+    }
+    .collapse-content {
+        margin-left: 20px;
+        max-width: 250px;
+    }
+    .dropdown-section {
+        width: 300px;
+        height: auto;
+        padding-top: 25px;
+    }
+    .arrow_forward_carroussel {
+        margin-left: 83%;
+        width: 24px;
+        position: relative;
+        padding-top: 3%;
+    }
+    .arrow_back_carroussel {
+        width: 24px;
+        position: relative;
+        padding-top: 3%;
+        margin-left: -100%;
+    }
+    .logo {
+        padding-top: 5%;
+        width: 310px;
+        height: 255px;
+        object-fit: cover;
+    }
+    .arrow_forward {
+        margin-left: 45%;
+    }
+    .location {
+        padding-top: 20px;
+        width: 300px;
+        height: 22px;
+    }
+    .host {
+        display: flex;
+        width: 135px;
+        padding-left: 140px;
+        height: 33px;
+        padding-bottom: 10px;
+    }
+    .dropdown-content {
+        width: 100%;
+        padding: 0;
+    }
+    .Description_text,
+    .Equipements_text {
+        width: 300px;
+    }
+    body {
+        width: 300px;
+    }
+    .principale {
+        width: 300px;
+    }
+    .carroussel {
+        width: 300px;
+    }
+    .logo_container {
+        width: 100%;
+    }
+    .title {
+        width: 300px;
+        font-size: 18px;
+    }
+    .tags {
+        width: 300px;
+        display: block;
+        padding-top: 1%;
+    }
+    .dropdown {
+        width: 100%;
+        display: block;
+        padding-top: 6%;
+    }
+    .description {
+        width: 100%;
+    }
+    .equipements {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 7%;
+    }
+    .item {
+        width: 84px;
+    }
+    .Rates {
+        float: left;
+        width: 94px;
+        img {
+            width: 98px;
+            height: 18px;
+        }
+    }
+    .Rates_and_host {
+        display: block;
+    }
+    .profil {
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+        padding-top: 11px;
+        border-radius: 45%;
+    }
+    .host_name {
+        padding-top: 15px;
+        padding-left: 50px;
+    }
+    .footer-container {
+        position: relative;
+        transition: transform 0.3s ease-in-out; /* Animation fluide */
+        padding-bottom: 35%;
+    }
+}
+@media (min-width: 375px) and (max-width: 425px) {
+    nav {
+        margin-left: 5%;
+    }
+    .arrow {
+        width: 18px;
+        height: 18px;
+    }
+    .collapse-header {
+        margin-top: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 320px;
     }
     .collapse-content {
         margin-left: 20px;
@@ -316,8 +445,9 @@ html {
         padding-bottom: 10px;
     }
     .dropdown-content {
-        width: 100%;
+        width: 95%;
         padding: 0;
+        color: #ff6060;
     }
     .Description_text,
     .Equipements_text {
@@ -331,7 +461,7 @@ html {
     }
     .carroussel {
         width: 335px;
-        padding-left: 20px;
+        padding-left: 30px;
     }
     .logo_container {
         width: 100%;
@@ -416,9 +546,10 @@ html {
         width: 100%;
     }
     .text {
-        width: 40%;
+        width: 768px;
         padding-left: 0;
-        margin-top: -7%;
+        margin-top: 93%;
+        z-index: 1;
     }
     #Cards {
         width: 768px;

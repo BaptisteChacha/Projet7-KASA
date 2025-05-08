@@ -65,7 +65,7 @@ li {
 }
 
 /* Écrans petits (mobiles) */
-@media (min-width: 375px) and (max-width: 425px) {
+@media (min-width: 320px) and (max-width: 425px) {
     .img_location {
         margin-left: 20px;
     }
@@ -90,6 +90,12 @@ li {
         padding-top: 205px;
     }
 }
+@media (min-width: 426px) and (max-width: 768px) {
+    .img_location {
+        width: 768px;
+        height: 400px;
+    }
+}
 @media (min-width: 769px) and (max-width: 1024px) {
     .card {
         max-width: calc(100%);
@@ -102,6 +108,7 @@ li {
     .text {
         padding-left: 0;
         z-index: 1;
+        padding-top: 52%;
     }
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
@@ -117,7 +124,7 @@ li {
         }
     }
     .text {
-        padding-left: 30px;
+        padding-left: 5px;
         padding-top: 205px;
         width: 373px;
         z-index: 1;

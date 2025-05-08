@@ -45,9 +45,9 @@ section {
 .dimension {
     width: 1240px;
 }
-@media (min-width: 375px) and (max-width: 425px) {
+@media (min-width: 320px) and (max-width: 425px) {
     .container_img_header {
-        width: 335px;
+        width: 300px;
         height: 111px;
         border-radius: 10px;
         padding-top: 50px;
@@ -61,17 +61,17 @@ section {
         }
     }
     body {
-        width: 320px;
+        width: 300px;
         height: 100%;
         display: flex;
         flex-direction: column;
     }
 
     .dimension {
-        width: 375px;
+        width: 320px;
     }
     #root {
-        width: 375px;
+        width: 300px;
     }
     .section_principale {
         width: 320px;
@@ -86,12 +86,12 @@ section {
         padding-left: 36px;
     }
     html {
-        max-width: 375px;
+        max-width: 320px;
     }
 }
 @media (min-width: 426px) and (max-width: 768px) {
     html {
-        width: 375px;
+        width: 320px;
         margin-left: 30px;
     }
     .container_img_header {
