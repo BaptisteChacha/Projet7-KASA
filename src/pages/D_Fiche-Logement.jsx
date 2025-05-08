@@ -1,24 +1,48 @@
 // src/pages/Logement.jsx
+
+// Importation des hooks de React Router pour accéder aux paramètres de l'URL et naviguer entre les pages
 import { useParams, useNavigate } from "react-router-dom";
+
+// Importation des hooks de React pour gérer l'état local et les effets de bord
 import { useEffect, useState } from "react";
+
+// Importation des composants personnalisés pour l'en-tête et le pied de page
 import Header from '../Components/Header.jsx';
+import Footer from '../Components/Footer.jsx';
+
+// Importation des fichiers CSS pour le style du composant
 import '../Style/Header.css';
 import '../Style/Fiche-Logement.css';
-import Footer from '../Components/Footer.jsx';
-import Collapse from '../Components/Collapse'; // Importation du composant Collapse
+
+// Importation du composant Collapse pour les sections déroulantes
+import Collapse from '../Components/Collapse';
+
+// Importation des images utilisées dans le carrousel et pour les évaluations
 import arrow_forward from '../Images/arrow_forward.svg';
 import arrow_back from '../Images/arrow_back_ios-24px 1.svg';
-import FULL_STAR from '../Images/full_star.svg'; // Importer les étoiles
-import EMPTY_STAR from '../Images/empty_star.svg'; // Importer l'étoile vide
+import FULL_STAR from '../Images/full_star.svg';
+import EMPTY_STAR from '../Images/empty_star.svg';
 
 function Logement() {
-    const { id } = useParams(); // Récupère l'ID du logement
-    const navigate = useNavigate(); // Permet de naviguer entre les pages
-    const [logements, setLogements] = useState([]); // Liste des logements
-    const [loading, setLoading] = useState(true); // Chargement des données
-    const [error, setError] = useState(null); // Gestion des erreurs
-    const [count, setCount] = useState(0); // Pour gérer l'index de l'image dans le carrousel
+    // Récupération de l'ID du logement depuis les paramètres de l'URL
+    const { id } = useParams();
 
+    // Hook pour naviguer vers d'autres pages
+    const navigate = useNavigate();
+
+    // État local pour stocker la liste des logements
+    const [logements, setLogements] = useState([]);
+
+    // État local pour gérer l'affichage du chargement
+    const [loading, setLoading] = useState(true);
+
+    // État local pour gérer les erreurs lors du chargement des données
+    const [error, setError] = useState(null);
+
+    // État local pour suivre l'index de l'image affichée dans le carrousel
+    const [count, setCount] = useState(0);
+
+    // Effet de bord pour charger les données des logements lors du montage du composant
     useEffect(() => {
         fetch("/logements.json")
             .then((response) => response.json())
@@ -32,33 +56,42 @@ function Logement() {
             });
     }, []);
 
-    // Recherche du logement selon l'ID dans l'URL
+    // Recherche du logement correspondant à l'ID dans la liste des logements
     const logement = logements.find((item) => item.id === id);
 
+    // Affichage d'un message de chargement si les données sont en cours de récupération
     if (loading) return <div>Chargement...</div>;
+
+    // Affichage d'un message d'erreur si une erreur est survenue lors du chargement des données
     if (error) return <div>{error}</div>;
+
+    // Redirection vers la page 404 si aucun logement ne correspond à l'ID fourni
     if (!logement) {
         navigate("/404", { replace: true });
         return null;
     }
 
+    // Vérification s'il y a plusieurs images pour activer le carrousel
+    const hasMultipleImages = logement.pictures && logement.pictures.length > 1;
+
     // Fonction pour passer à l'image suivante dans le carrousel
     const NextImage = () => {
-        if (logement.pictures && logement.pictures.length > 0) {
-            setCount((count + 1) % logement.pictures.length); // Passage à l'image suivante
+        if (hasMultipleImages) {
+            setCount((count + 1) % logement.pictures.length);
         }
     };
 
     // Fonction pour revenir à l'image précédente dans le carrousel
     const PreviousImage = () => {
-        if (logement.pictures && logement.pictures.length > 0) {
-            setCount((count - 1 + logement.pictures.length) % logement.pictures.length); // Passage à l'image précédente
+        if (hasMultipleImages) {
+            setCount((count - 1 + logement.pictures.length) % logement.pictures.length);
         }
     };
 
-    const logo_container = logement.pictures ? logement.pictures[count] : null; // Image à afficher
+    // Sélection de l'image actuelle à afficher dans le carrousel
+    const logo_container = logement.pictures ? logement.pictures[count] : null;
 
-    // Créer les étoiles en fonction de la note
+    // Fonction pour générer les étoiles de notation en fonction de la note du logement
     const renderStars = (rating) => {
         const stars = [];
         for (let i = 1; i <= 5; i++) {
@@ -73,28 +106,38 @@ function Logement() {
 
     return (
         <div className="principale">
+            {/* Affichage de l'en-tête de la page */}
             <Header />
 
+            {/* Section du carrousel d'images */}
             <div className="carroussel">
                 <div className="logo_container">
+                    {/* Affichage de l'image actuelle du carrousel */}
                     <img src={logo_container} alt="" className="logo" />
-                    <img
-                        src={arrow_back}
-                        alt="prev"
-                        className="arrow_back_carroussel"
-                        onClick={PreviousImage}
-                    />
-                    <img
-                        src={arrow_forward}
-                        alt="next"
-                        className="arrow_forward_carroussel"
-                        onClick={NextImage}
-                    />
+                    {/* Affichage des flèches de navigation si plusieurs images sont disponibles */}
+                    {hasMultipleImages && (
+                        <>
+                            <img
+                                src={arrow_back}
+                                alt="prev"
+                                className="arrow_back_carroussel"
+                                onClick={PreviousImage}
+                            />
+                            <img
+                                src={arrow_forward}
+                                alt="next"
+                                className="arrow_forward_carroussel"
+                                onClick={NextImage}
+                            />
+                        </>
+                    )}
                 </div>
 
+                {/* Affichage du titre et de la localisation du logement */}
                 <div className="title">{logement.title}</div>
                 <div className="location">{logement.location}</div>
 
+                {/* Affichage des tags associés au logement */}
                 <div className="tags">
                     {logement.tags?.map((item) => (
                         <div className="item" key={item}>
@@ -103,9 +146,12 @@ function Logement() {
                     ))}
                 </div>
 
+                {/* Section affichant les informations de l'hôte et la notation */}
                 <div className="Rates_and_host">
                     <div className="host">
+                        {/* Affichage du nom de l'hôte */}
                         <div className="host_name">{logement.host?.name}</div>
+                        {/* Affichage de la photo de l'hôte */}
                         <img
                             src={logement.host?.picture}
                             alt="profil"
@@ -113,8 +159,8 @@ function Logement() {
                         />
                     </div>
 
+                    {/* Affichage de la notation sous forme d'étoiles */}
                     <div className="Rates">
-                        {/* Afficher les étoiles en fonction de la note */}
                         <div className="stars">
                             {renderStars(parseInt(logement.rating))}
                         </div>
@@ -122,10 +168,10 @@ function Logement() {
                 </div>
             </div>
 
-            {/* Utilisation du Collapse pour la description */}
+            {/* Utilisation du composant Collapse pour afficher la description du logement */}
             <Collapse title="Description" content={logement.description} />
 
-            {/* Utilisation du Collapse pour les équipements */}
+            {/* Utilisation du composant Collapse pour afficher les équipements du logement */}
             <Collapse
                 title="Equipements"
                 content={logement.equipments?.map((equipement, index) => (

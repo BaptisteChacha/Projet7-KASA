@@ -563,6 +563,7 @@ html {
     .host {
         display: flex;
         float: right;
+        padding-top: 9%;
     }
     .host_name {
         width: 93px;
@@ -612,7 +613,7 @@ html {
         margin-left: 82%;
     }
     .Rates_and_host {
-        padding-left: 50em;
+        padding-left: 53em;
     }
     .host_name {
         padding-right: 1em;
