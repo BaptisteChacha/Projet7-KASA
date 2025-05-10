@@ -41,8 +41,8 @@
     text-decoration-line: underline;
 }
 @media (min-width: 320px) and (max-width: 425px) {
-    html {
-        width: 300px;
+    nav {
+        margin-left: 3%;
     }
     .erreur-404 {
         font-family: Montserrat;

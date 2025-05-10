@@ -239,6 +239,9 @@ html {
 .dropdown-section {
     width: 100%;
 }
+.collapse-container {
+    margin-bottom: 3%;
+}
 .collapse-header {
     display: flex;
     justify-content: space-between;
@@ -254,7 +257,7 @@ html {
     background-color: #fff;
     padding: 10px;
     border-radius: 5px;
-    width: 100%;
+    width: 95%;
     color: #ff6060;
     font-family: Montserrat;
     font-size: 18px;
@@ -263,7 +266,10 @@ html {
     line-height: 142.6%;
     animation: slide 1s ease-in;
 }
-@media (min-width: 320px) and (max-width: 374px) {
+@media (max-width: 320px) {
+    #divPrincipale {
+        padding-left: 0;
+    }
     .arrow {
         width: 18px;
         height: 18px;
@@ -300,6 +306,7 @@ html {
         width: 310px;
         height: 255px;
         object-fit: cover;
+        margin-left: 10px;
     }
     .arrow_forward {
         margin-left: 45%;
@@ -308,6 +315,7 @@ html {
         padding-top: 20px;
         width: 300px;
         height: 22px;
+        margin-left: 10px;
     }
     .host {
         display: flex;
@@ -339,11 +347,13 @@ html {
     .title {
         width: 300px;
         font-size: 18px;
+        margin-left: 10px;
     }
     .tags {
         width: 300px;
         display: block;
         padding-top: 1%;
+        margin-left: 10px;
     }
     .dropdown {
         width: 100%;
@@ -364,6 +374,7 @@ html {
     .Rates {
         float: left;
         width: 94px;
+        margin-left: 20px;
         img {
             width: 98px;
             height: 18px;
@@ -390,8 +401,11 @@ html {
     }
 }
 @media (min-width: 375px) and (max-width: 425px) {
+    #divPrincipale {
+        margin-left: 0;
+    }
     nav {
-        margin-left: 5%;
+        margin-left: 20px;
     }
     .arrow {
         width: 18px;
@@ -401,7 +415,7 @@ html {
         margin-top: 10px;
         margin-left: 20px;
         margin-right: 20px;
-        width: 320px;
+        width: 360px;
     }
     .collapse-content {
         margin-left: 20px;
@@ -425,7 +439,7 @@ html {
     }
     .logo {
         padding-top: 5%;
-        width: 335px;
+        width: 360px;
         height: 255px;
         object-fit: cover;
     }
@@ -519,6 +533,10 @@ html {
     }
 }
 @media (min-width: 426px) and (max-width: 768px) {
+    .arrow {
+        width: 20px;
+        height: 20px;
+    }
     .principale {
         width: 768px;
     }
@@ -540,20 +558,7 @@ html {
         max-width: calc(100% - 16px);
         height: 100%;
     }
-    .list_card {
-        margin: 0;
-        justify-content: start;
-        width: 100%;
-    }
-    .text {
-        width: 768px;
-        padding-left: 0;
-        margin-top: 93%;
-        z-index: 1;
-    }
-    #Cards {
-        width: 768px;
-    }
+
     body {
         width: 768px;
     }
@@ -587,6 +592,10 @@ html {
     }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
+    .arrow {
+        width: 32px;
+        height: 32px;
+    }
     body {
         width: 1024px;
     }
@@ -601,6 +610,13 @@ html {
     }
     .title {
         width: 1024px;
+        margin-left: 20px;
+    }
+    .location {
+        margin-left: 20px;
+    }
+    .tags {
+        margin-left: 20px;
     }
     .dropdown {
         width: 1024px;
@@ -630,6 +646,16 @@ html {
     }
     .Rates {
         padding-bottom: 3em;
+    }
+    .logo {
+        width: 95%;
+        margin-left: 40px;
+    }
+    .arrow_back_carroussel {
+        margin-left: -96%;
+    }
+    .arrow_forward_carroussel {
+        margin-left: 77%;
     }
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
@@ -671,10 +697,47 @@ html {
         padding-bottom: 3em;
     }
     html {
-        max-width: 1240px;
         margin-left: 70px;
     }
     .arrow_forward_carroussel {
         margin-left: 83%;
+    }
+    nav {
+        margin-left: 168%;
+    }
+}
+@media (min-width: 1440px) {
+    .logo {
+        width: 100%;
+        margin-left: 10%;
+    }
+    .title {
+        margin-left: 10%;
+    }
+    .tags {
+        margin-left: 10%;
+    }
+    .location {
+        margin-left: 10%;
+    }
+    .Rates {
+        float: right;
+    }
+    .stars {
+        padding-top: 50%;
+    }
+    .collapse-container {
+        width: 100%;
+        margin-left: 10%;
+    }
+    #divPrincipale {
+        margin-left: 14%;
+    }
+    .divFooter {
+        margin-left: 10%;
+        width: 100%;
+    }
+    .host {
+        float: right;
     }
 }

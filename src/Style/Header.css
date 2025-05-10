@@ -17,7 +17,6 @@ nav {
 #divPrincipale {
     display: flex;
     place-content: space-between;
-    width: 1240px;
     padding-bottom: 3%;
 }
 #divPrincipale a {
@@ -52,12 +51,12 @@ li {
         text-align: start;
     }
     #divPrincipale {
-        width: 300px;
+        max-width: 300px;
         height: 47px;
         display: flex;
         flex-wrap: nowrap;
         padding-top: 20px;
-        padding-left: 40px;
+        padding-left: 25px;
         a {
             width: 145px;
             height: 17px;
@@ -84,14 +83,33 @@ li {
         height: 17px;
     }
 }
-@media (min-width: 426px) and (max-width: 768px) {
-    .Text-logo {
-        padding-top: 5%;
+@media (min-width: 375px) {
+    #divPrincipale {
+        max-width: 300px;
+        margin-left: 40px;
     }
 }
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (min-width: 425px) {
+    #divPrincipale {
+        max-width: 400px;
+        margin-left: 50px;
+    }
+    nav {
+        margin-left: 20%;
+        padding-top: 25px;
+    }
+}
+@media (min-width: 768px) {
+    nav {
+        margin-left: 35%;
+    }
+}
+@media (min-width: 1024px) {
     .arrow {
         width: 32px;
         height: 32px;
+    }
+    nav {
+        margin-left: 100%;
     }
 }
