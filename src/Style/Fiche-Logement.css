@@ -271,7 +271,8 @@ html {
         width: 18px;
         height: 18px;
     }
-    .collapse-header {
+    .collapse_description,
+    .collapse_equipements {
         margin-top: 10px;
         margin-left: 20px;
         margin-right: 20px;
@@ -296,11 +297,11 @@ html {
         width: 24px;
         position: relative;
         padding-top: 3%;
-        margin-left: -100%;
+        margin-left: -98%;
     }
     .logo {
         padding-top: 5%;
-        width: 310px;
+        width: 300px;
         height: 255px;
         object-fit: cover;
         margin-left: 10px;
@@ -339,7 +340,7 @@ html {
         width: 300px;
     }
     .logo_container {
-        width: 100%;
+        width: 310px;
     }
     .title {
         width: 300px;
@@ -366,7 +367,7 @@ html {
         margin-top: 7%;
     }
     .item {
-        width: 84px;
+        width: 88px;
     }
     .Rates {
         float: left;
@@ -398,9 +399,6 @@ html {
     }
 }
 @media (min-width: 375px) and (max-width: 425px) {
-    #divPrincipale {
-        margin-left: 0;
-    }
     nav {
         margin-left: 20px;
     }
@@ -408,11 +406,11 @@ html {
         width: 18px;
         height: 18px;
     }
-    .collapse-header {
+    .collapse_description,
+    .collapse_equipements {
         margin-top: 10px;
-        margin-left: 20px;
-        margin-right: 20px;
-        width: 360px;
+        margin-left: 10px;
+        max-width: 350px;
     }
     .collapse-content {
         margin-left: 20px;
@@ -436,9 +434,10 @@ html {
     }
     .logo {
         padding-top: 5%;
-        width: 360px;
+        width: 100%;
         height: 255px;
         object-fit: cover;
+        margin-left: calc(5px + 2vw); /* Ajuste la marge en fonction de l'écran */
     }
     .arrow_forward {
         margin-left: 45%;
@@ -472,10 +471,10 @@ html {
     }
     .carroussel {
         width: 335px;
-        padding-left: 30px;
+        padding-left: 15px;
     }
     .logo_container {
-        width: 100%;
+        width: 360px;
     }
     .title {
         width: 335px;
@@ -500,7 +499,7 @@ html {
         margin-top: 7%;
     }
     .item {
-        width: 84px;
+        width: 88px;
     }
     .Rates {
         float: left;
@@ -544,7 +543,15 @@ html {
         width: 768px;
     }
     .title {
-        width: 768px;
+        width: 743px;
+        margin-left: 25px;
+    }
+    .location {
+        width: 743px;
+        margin-left: 25px;
+    }
+    .tags {
+        margin-left: 25px;
     }
     .dropdown {
         width: 768px;
@@ -586,14 +593,21 @@ html {
     }
     .collapse-container {
         padding-bottom: 1%;
+        max-width: 750px;
+        margin-left: 10px;
     }
     .logo {
-        width: 760px;
+        margin-left: 10px;
+        width: 740px;
         height: 500px;
-        margin-left: 1%;
     }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
+    .collapse_description,
+    .collapse_equipements {
+        max-width: 960px;
+        margin-left: 36px;
+    }
     .arrow {
         width: 32px;
         height: 32px;
@@ -611,14 +625,15 @@ html {
         width: 1024px;
     }
     .title {
-        width: 1024px;
-        margin-left: 20px;
+        max-width: 799px;
+        margin-left: 35px;
     }
     .location {
-        margin-left: 20px;
+        max-width: 799px;
+        margin-left: 35px;
     }
     .tags {
-        margin-left: 20px;
+        margin-left: 35px;
     }
     .dropdown {
         width: 1024px;
@@ -631,11 +646,11 @@ html {
         margin-left: 82%;
     }
     .Rates_and_host {
-        padding-left: 53em;
+        padding-left: 855px;
     }
     .host_name {
-        padding-right: 1em;
         padding-top: 1em;
+        max-width: 80px;
         img {
             margin-left: 9em;
         }
@@ -648,9 +663,10 @@ html {
     }
     .Rates {
         padding-bottom: 3em;
+        padding-right: 25px;
     }
     .logo {
-        width: 1000px;
+        width: 960px;
         height: 600px;
         margin-left: 40px;
     }
@@ -662,20 +678,12 @@ html {
     }
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
-    .title {
-        margin-left: 7%;
-    }
-    .location {
-        margin-left: 7%;
-    }
-    .tags {
-        margin-left: 7%;
-    }
     .principale {
         width: 1240px;
     }
     .carroussel {
         width: 1240px;
+        margin-left: 100px;
     }
     .logo_container {
         width: 1240px;
@@ -690,7 +698,7 @@ html {
         width: 47%;
     }
     .Rates_and_host {
-        padding-left: 96%;
+        padding-left: 88%;
     }
     .host_name {
         padding-right: 1em;
@@ -714,16 +722,10 @@ html {
     .arrow_forward_carroussel {
         margin-left: 83%;
     }
-    nav {
-        margin-left: 168%;
-    }
     .logo {
         height: 950px;
         width: 100%;
-        margin-left: 7%;
-    }
-    .stars {
-        padding-left: 70%;
+        object-fit: cover;
     }
     .collapse_description,
     .collapse_equipements {
@@ -749,7 +751,7 @@ html {
         float: right;
     }
     .stars {
-        padding-top: 50%;
+        padding-left: 100%;
     }
     .collapse-container {
         width: 100%;
@@ -763,6 +765,9 @@ html {
         width: 100%;
     }
     .host {
-        float: right;
+        margin-left: 105%;
+    }
+    .arrow_forward_carroussel {
+        margin-left: 83%;
     }
 }

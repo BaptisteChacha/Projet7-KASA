@@ -19,7 +19,6 @@
     flex-direction: column;
     margin-bottom: 6rem;
     margin-top: 1.5rem;
-    width: 100%;
 }
 .respect img,
 .fiabilité img,
@@ -99,8 +98,8 @@
         margin-left: 20px;
     }
     .menu_deroulant {
-        width: 320px;
-        margin-left: 20px;
+        width: 300px;
+        margin-left: 10px;
     }
 }
 @media (min-width: 375px) and (max-width: 424px) {
@@ -110,15 +109,12 @@
     .Image_a_propos {
         width: 360px;
         border-radius: 30px;
-        margin-left: 25px;
-    }
-    .divFooter {
-        margin-top: 15px;
-        width: 360px;
         margin-left: 15px;
     }
+
     .menu_deroulant {
-        width: 100%;
+        width: 360px;
+        margin-left: 15px;
     }
 }
 @media (min-width: 425px) and (max-width: 767px) {
@@ -138,10 +134,10 @@
         left: 100px;
         object-fit: cover;
         border-radius: 30px;
-        margin-left: 20px;
+        margin-left: 10px;
     }
     .menu_deroulant {
-        margin-left: 20px;
+        margin-left: 10px;
     }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -172,11 +168,16 @@
         font-size: 24px;
     }
     .Image_a_propos {
-        width: 100%;
+        max-width: 990px;
+        margin-left: 20px;
         height: 223px;
         left: 100px;
         object-fit: cover;
         border-radius: 30px;
+    }
+    .menu_deroulant {
+        max-width: 990px;
+        margin-left: 20px;
     }
 }
 @media (min-width: 1440px) {
@@ -184,12 +185,13 @@
         margin-left: 0px;
     }
     .Image_a_propos {
-        margin-left: 20%;
-    }
-    nav {
-        margin-left: 120%;
+        max-width: 1400px;
+        width: 1350px;
+        margin-left: 50px;
     }
     .menu_deroulant {
-        margin-left: 20%;
+        max-width: 1400px;
+        width: 1350px;
+        margin-left: 50px;
     }
 }

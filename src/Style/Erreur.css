@@ -77,9 +77,6 @@
     }
 }
 @media (min-width: 768px) {
-    nav {
-        margin-left: 45%;
-    }
     .erreur-404 {
         padding-left: 110px;
     }
@@ -95,9 +92,6 @@
     }
 }
 @media (min-width: 1024px) {
-    nav {
-        margin-left: 95%;
-    }
     .erreur-404 {
         margin-left: 110px;
     }
@@ -113,9 +107,6 @@
     }
 }
 @media (min-width: 1440px) {
-    nav {
-        margin-left: 160%;
-    }
     .erreur-404 {
         margin-left: 300px;
     }

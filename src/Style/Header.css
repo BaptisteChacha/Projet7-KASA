@@ -4,8 +4,7 @@
     width: 1240px;
     height: 68px;
     justify-content: center;
-    align-items: flex-end; /* corrigé depuis 'right' */
-    gap: 720.678px;
+    align-items: flex-end;
     color: #ff6060;
 }
 nav {
@@ -67,11 +66,11 @@ li {
         display: flex;
         flex-wrap: nowrap;
         padding-top: 20px;
-        padding-left: 25px;
+        padding-left: 5px;
     }
 
     #divPrincipale a {
-        width: 145px;
+        width: 57px;
         height: 17px;
         font-size: 13px;
     }
@@ -82,7 +81,7 @@ li {
 
     nav {
         padding-top: 18px;
-        width: 140px;
+        width: 100px;
         height: 17px;
         flex-shrink: 0;
         display: flex;
@@ -130,5 +129,13 @@ li {
 
     nav {
         margin-left: 100%;
+    }
+}
+@media (min-width: 1440px) {
+    nav {
+        margin-left: 160%;
+    }
+    #divPrincipale {
+        margin-left: 85px;
     }
 }
