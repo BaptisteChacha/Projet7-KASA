@@ -267,9 +267,6 @@ html {
     animation: slide 1s ease-in;
 }
 @media (max-width: 320px) {
-    #divPrincipale {
-        padding-left: 0;
-    }
     .arrow {
         width: 18px;
         height: 18px;
@@ -590,6 +587,11 @@ html {
     .collapse-container {
         padding-bottom: 1%;
     }
+    .logo {
+        width: 760px;
+        height: 500px;
+        margin-left: 1%;
+    }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
     .arrow {
@@ -648,7 +650,8 @@ html {
         padding-bottom: 3em;
     }
     .logo {
-        width: 95%;
+        width: 1000px;
+        height: 600px;
         margin-left: 40px;
     }
     .arrow_back_carroussel {
@@ -659,6 +662,15 @@ html {
     }
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
+    .title {
+        margin-left: 7%;
+    }
+    .location {
+        margin-left: 7%;
+    }
+    .tags {
+        margin-left: 7%;
+    }
     .principale {
         width: 1240px;
     }
@@ -678,7 +690,7 @@ html {
         width: 47%;
     }
     .Rates_and_host {
-        padding-left: 87%;
+        padding-left: 96%;
     }
     .host_name {
         padding-right: 1em;
@@ -705,8 +717,21 @@ html {
     nav {
         margin-left: 168%;
     }
+    .logo {
+        height: 950px;
+        width: 100%;
+        margin-left: 7%;
+    }
+    .stars {
+        padding-left: 70%;
+    }
+    .collapse_description,
+    .collapse_equipements {
+        margin-left: 7%;
+        width: 1240px;
+    }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
     .logo {
         width: 100%;
         margin-left: 10%;

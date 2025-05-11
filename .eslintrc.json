@@ -1,0 +1,13 @@
+{
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": [
+      "react-app"
+    ],
+    "rules": {
+      "react/no-unknown-property": "off"
+    }
+  }
+  

@@ -57,19 +57,21 @@ function Logement() {
     }, []);
 
     // Recherche du logement correspondant à l'ID dans la liste des logements
-    const logement = logements.find((item) => item.id === id);
+const logement = logements.find((item) => item.id === id);
 
-    // Affichage d'un message de chargement si les données sont en cours de récupération
-    if (loading) return <div>Chargement...</div>;
-
-    // Affichage d'un message d'erreur si une erreur est survenue lors du chargement des données
-    if (error) return <div>{error}</div>;
-
-    // Redirection vers la page 404 si aucun logement ne correspond à l'ID fourni
-    if (!logement) {
+// Rediriger vers la page 404 si aucun logement ne correspond, une fois les données chargées
+useEffect(() => {
+    if (!loading && !logement) {
         navigate("/404", { replace: true });
-        return null;
     }
+}, [loading, logement, navigate]);
+
+// Affichage d'un message de chargement si les données sont en cours de récupération
+if (loading) return <div>Chargement...</div>;
+
+// Si logement est encore null ici, cela veut dire qu'on est en train de rediriger
+if (!logement) return null;
+
 
     // Vérification s'il y a plusieurs images pour activer le carrousel
     const hasMultipleImages = logement.pictures && logement.pictures.length > 1;
@@ -169,11 +171,11 @@ function Logement() {
             </div>
 
             {/* Utilisation du composant Collapse pour afficher la description du logement */}
-            <Collapse title="Description" content={logement.description} />
+            <Collapse title="Description" className="collapse_description" content={logement.description}  />
 
             {/* Utilisation du composant Collapse pour afficher les équipements du logement */}
             <Collapse
-                title="Equipements"
+                title="Equipements" className="collapse_equipements"
                 content={logement.equipments?.map((equipement, index) => (
                     <ul key={index}>
                         <li>{equipement}</li>

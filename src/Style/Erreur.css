@@ -41,8 +41,8 @@
     text-decoration-line: underline;
 }
 @media (min-width: 320px) and (max-width: 425px) {
-    nav {
-        margin-left: 3%;
+    #root {
+        max-width: 400px;
     }
     .erreur-404 {
         font-family: Montserrat;
@@ -74,5 +74,55 @@
         font-family: Montserrat;
         font-weight: 500;
         font-size: 14px;
+    }
+}
+@media (min-width: 768px) {
+    nav {
+        margin-left: 45%;
+    }
+    .erreur-404 {
+        padding-left: 110px;
+    }
+    .erreur {
+        left: 8px;
+        max-width: 750px;
+    }
+    .retour-accueil {
+        padding-left: 250px;
+    }
+    #root {
+        max-width: 750px;
+    }
+}
+@media (min-width: 1024px) {
+    nav {
+        margin-left: 95%;
+    }
+    .erreur-404 {
+        margin-left: 110px;
+    }
+    .erreur {
+        left: 135px;
+        max-width: 1000px;
+    }
+    .retour-accueil {
+        padding-left: 350px;
+    }
+    #root {
+        max-width: 1024px;
+    }
+}
+@media (min-width: 1440px) {
+    nav {
+        margin-left: 160%;
+    }
+    .erreur-404 {
+        margin-left: 300px;
+    }
+    .erreur {
+        left: 320px;
+    }
+    .retour-accueil {
+        padding-left: 570px;
     }
 }

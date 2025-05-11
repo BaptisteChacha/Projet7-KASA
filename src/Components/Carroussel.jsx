@@ -30,7 +30,7 @@ function Carrousel({ images }) {
       <img
         src={images[count]}
         alt={`Image ${count + 1} sur ${images.length}`}
-        className="logo"
+        className="logo_carroussel"
       />
 
       {/* Flèche pour revenir à l'image précédente */}

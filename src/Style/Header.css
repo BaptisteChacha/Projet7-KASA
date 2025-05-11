@@ -4,7 +4,7 @@
     width: 1240px;
     height: 68px;
     justify-content: center;
-    align-items: right;
+    align-items: flex-end; /* corrigé depuis 'right' */
     gap: 720.678px;
     color: #ff6060;
 }
@@ -14,11 +14,16 @@ nav {
     flex-shrink: 0;
     display: flex;
 }
+
 #divPrincipale {
     display: flex;
     place-content: space-between;
     padding-bottom: 3%;
+    position: static;
+    z-index: 10;
+    background-color: white;
 }
+
 #divPrincipale a {
     width: 309px;
     color: #ff6060;
@@ -28,9 +33,11 @@ nav {
     font-style: normal;
     font-weight: 500;
 }
+
 #divPrincipale a:hover {
     background: rgba(255, 96, 96, 0.1);
 }
+
 .Text-logo {
     position: absolute;
     z-index: 1;
@@ -41,15 +48,19 @@ nav {
     font-weight: 500;
     text-align: center;
 }
+
 li {
     list-style: none;
 }
+
+/* Responsive */
 @media (min-width: 320px) and (max-width: 425px) {
     .Text-logo {
         font-size: 24px;
         padding-left: 36px;
         text-align: start;
     }
+
     #divPrincipale {
         max-width: 300px;
         height: 47px;
@@ -57,15 +68,18 @@ li {
         flex-wrap: nowrap;
         padding-top: 20px;
         padding-left: 25px;
-        a {
-            width: 145px;
-            height: 17px;
-            font-size: 13px;
-        }
-        img {
-            margin-left: -5%;
-        }
     }
+
+    #divPrincipale a {
+        width: 145px;
+        height: 17px;
+        font-size: 13px;
+    }
+
+    #divPrincipale img {
+        margin-left: -5%;
+    }
+
     nav {
         padding-top: 18px;
         width: 140px;
@@ -74,29 +88,32 @@ li {
         display: flex;
         margin-left: -10%;
     }
+
     .accueil_link {
         width: 59px;
         height: 17px;
     }
+
     .a_propos_link {
         width: 71px;
         height: 17px;
     }
 }
+
 @media (min-width: 375px) {
     #divPrincipale {
         max-width: 300px;
         margin-left: 40px;
     }
 }
+
 @media (min-width: 425px) {
     #divPrincipale {
         max-width: 400px;
-        margin-left: 50px;
     }
+
     nav {
         margin-left: 20%;
-        padding-top: 25px;
     }
 }
 @media (min-width: 768px) {
@@ -104,11 +121,13 @@ li {
         margin-left: 35%;
     }
 }
+
 @media (min-width: 1024px) {
     .arrow {
         width: 32px;
         height: 32px;
     }
+
     nav {
         margin-left: 100%;
     }

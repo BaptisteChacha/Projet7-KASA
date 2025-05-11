@@ -87,9 +87,6 @@
     object-fit: cover;
 }
 @media (max-width: 320px) and (max-width: 375px) {
-    #divPrincipale {
-        margin-left: 40px;
-    }
     .container {
         width: 320px;
     }
@@ -107,9 +104,6 @@
     }
 }
 @media (min-width: 375px) and (max-width: 424px) {
-    #divPrincipale {
-        margin-left: 40px;
-    }
     .container {
         width: 360px;
     }
@@ -187,12 +181,15 @@
 }
 @media (min-width: 1440px) {
     html {
-        margin-left: 110px;
+        margin-left: 0px;
     }
     .Image_a_propos {
-        margin-left: 10%;
+        margin-left: 20%;
     }
     nav {
         margin-left: 120%;
+    }
+    .menu_deroulant {
+        margin-left: 20%;
     }
 }
