@@ -53,7 +53,7 @@ li {
 }
 
 /* Responsive */
-@media (min-width: 320px) and (max-width: 425px) {
+@media (min-width: 320px) {
     .Text-logo {
         font-size: 24px;
         padding-left: 36px;
@@ -61,12 +61,18 @@ li {
     }
 
     #divPrincipale {
-        max-width: 300px;
-        height: 47px;
         display: flex;
-        flex-wrap: nowrap;
-        padding-top: 20px;
-        padding-left: 5px;
+        align-items: center;
+        justify-content: space-between; /* pour que le logo reste à gauche et le menu à droite */
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Si tu veux centrer le logo à 100% */
+    #divPrincipale img {
+        margin: 0 auto;
+        width: 165px;
     }
 
     #divPrincipale a {
@@ -117,7 +123,12 @@ li {
 }
 @media (min-width: 768px) {
     nav {
-        margin-left: 35%;
+        margin-left: 120%;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    nav {
+        margin-left: 185%;
     }
 }
 
@@ -128,7 +139,7 @@ li {
     }
 
     nav {
-        margin-left: 100%;
+        margin-left: 185%;
     }
 }
 @media (min-width: 1440px) {
