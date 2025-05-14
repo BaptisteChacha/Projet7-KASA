@@ -63,18 +63,15 @@ li {
     #divPrincipale {
         display: flex;
         align-items: center;
-        justify-content: space-between; /* pour que le logo reste à gauche et le menu à droite */
+        justify-content: space-between;
         padding: 20px;
         width: 100%;
         box-sizing: border-box;
     }
-
-    /* Si tu veux centrer le logo à 100% */
     #divPrincipale img {
         margin: 0 auto;
         width: 165px;
     }
-
     #divPrincipale a {
         width: 57px;
         height: 17px;
