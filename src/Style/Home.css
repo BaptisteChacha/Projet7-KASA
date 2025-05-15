@@ -23,7 +23,8 @@ body {
 }
 
 #root {
-    max-width: 360px;
+    max-width: 100%;
+    width: 100%;
 }
 
 .section_principale {
@@ -132,7 +133,7 @@ body {
 
     .Text-logo {
         padding-left: 35px;
-        padding-top: 25px;
+        padding-top: 65px;
     }
 
     #root {
@@ -142,24 +143,28 @@ body {
 
 /* 769px - 1023px */
 @media (min-width: 769px) and (max-width: 1023px) {
-    .container_img_header img {
-        max-width: 990px;
-        height: 200px;
+    body {
+        width: 100%;
     }
-
-    #Cards {
-        max-width: 1000px;
-        display: flex;
-        flex-wrap: wrap;
+    .container_img_header img {
+        max-width: 876px;
+        width: 109%;
+        height: 200px;
+        margin-left: 3%;
     }
 
     .Text-logo {
         padding-left: 20px;
-        padding-top: 40px;
+        padding-top: 10%;
+        font-size: 200%;
     }
 
     #root {
-        max-width: 1023px;
+        max-width: 100%;
+        width: 100%;
+    }
+    .dimension {
+        width: 100%;
     }
 }
 

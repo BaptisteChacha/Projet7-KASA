@@ -115,7 +115,7 @@ li {
     }
 
     nav {
-        margin-left: 20%;
+        margin-left: 100%;
     }
 }
 @media (min-width: 768px) {
@@ -125,7 +125,7 @@ li {
 }
 @media (min-width: 769px) and (max-width: 1024px) {
     nav {
-        margin-left: 185%;
+        margin-left: 120%;
     }
 }
 
