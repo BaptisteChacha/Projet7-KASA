@@ -166,10 +166,11 @@ li:hover .text {
 }
 @media (min-width: 1440px) {
     .list_card {
-        max-width: 1440px;
+        max-width: 100%;
     }
     #Cards {
-        width: 1400px;
-        max-width: 1400px;
+        width: 98%;
+        max-width: 100%;
+        margin: 0;
     }
 }

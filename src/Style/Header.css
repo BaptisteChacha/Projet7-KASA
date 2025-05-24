@@ -130,20 +130,24 @@ li {
 }
 
 @media (min-width: 1024px) {
+    #divPrincipale {
+        max-width: 95%;
+    }
     .arrow {
         width: 32px;
         height: 32px;
     }
 
     nav {
-        margin-left: 185%;
+        margin-left: 0;
     }
 }
 @media (min-width: 1440px) {
     nav {
-        margin-left: 160%;
+        margin-left: 1000px;
     }
     #divPrincipale {
-        margin-left: 85px;
+        margin-left: 125px;
+        max-width: 90%;
     }
 }

@@ -103,7 +103,7 @@
         padding-left: 350px;
     }
     #root {
-        max-width: 1024px;
+        max-width: 100%;
     }
 }
 @media (min-width: 1440px) {
@@ -115,5 +115,8 @@
     }
     .retour-accueil {
         padding-left: 570px;
+    }
+    #root {
+        max-width: 100%;
     }
 }

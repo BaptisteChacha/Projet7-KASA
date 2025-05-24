@@ -171,11 +171,11 @@ body {
 /* 1024px et + */
 @media (min-width: 1024px) {
     .container_img_header {
-        max-width: 1000px;
+        max-width: 98%;
     }
 
     .container_img_header img {
-        width: 1000px;
+        width: 100%;
         height: 160px;
         margin-left: 10px;
     }
@@ -191,15 +191,13 @@ body {
 
 /* 1440px et + */
 @media (min-width: 1440px) {
+    .container_img_header {
+        max-width: 100%;
+    }
     .container_img_header img {
-        width: 1400px;
+        width: 98%;
         margin-left: 20px;
     }
-
-    nav {
-        margin-left: 200%;
-    }
-
     html {
         margin-left: 0;
     }

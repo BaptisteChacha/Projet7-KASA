@@ -22,11 +22,11 @@
 }
 @media (min-width: 1024px) {
     .divFooter {
-        width: 95%;
+        width: 100%;
     }
 }
 @media (min-width: 1440px) {
     .divFooter {
-        width: 1400px;
+        width: 100%;
     }
 }
