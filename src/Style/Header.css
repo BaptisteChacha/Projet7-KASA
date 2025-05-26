@@ -111,7 +111,7 @@ li {
 
 @media (min-width: 425px) {
     #divPrincipale {
-        max-width: 400px;
+        max-width: 94%;
     }
 
     nav {

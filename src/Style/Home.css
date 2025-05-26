@@ -147,8 +147,8 @@ body {
         width: 100%;
     }
     .container_img_header img {
-        max-width: 876px;
-        width: 109%;
+        max-width: 100%;
+        width: 95%;
         height: 200px;
         margin-left: 3%;
     }

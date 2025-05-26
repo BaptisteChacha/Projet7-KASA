@@ -116,7 +116,7 @@
 }
 @media (min-width: 425px) and (max-width: 767px) {
     .container {
-        width: 400px;
+        width: 95%;
     }
     .fiabilité,
     .respect,
@@ -139,7 +139,7 @@
 }
 @media (min-width: 768px) and (max-width: 1023px) {
     .container {
-        width: 760px;
+        width: 100%;
     }
     .fiabilité,
     .respect,
@@ -157,7 +157,7 @@
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
     .container {
-        max-width: 1024px;
+        max-width: 100%;
     }
     .texte_page_a_propos {
         width: 978px;
@@ -165,7 +165,7 @@
         font-size: 24px;
     }
     .Image_a_propos {
-        max-width: 990px;
+        max-width: 100%;
         margin-left: 20px;
         height: 223px;
         left: 100px;
@@ -173,7 +173,7 @@
         border-radius: 30px;
     }
     .menu_deroulant {
-        max-width: 990px;
+        max-width: 95%;
         margin-left: 20px;
     }
 }
@@ -182,13 +182,13 @@
         margin-left: 0px;
     }
     .Image_a_propos {
-        max-width: 1400px;
-        width: 1350px;
+        max-width: 95%;
+        width: 95%;
         margin-left: 50px;
     }
     .menu_deroulant {
-        max-width: 1400px;
-        width: 1350px;
+        max-width: 100%;
+        width: 95%;
         margin-left: 50px;
     }
 }

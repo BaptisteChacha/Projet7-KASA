@@ -14,6 +14,8 @@
     font-style: normal;
     font-weight: 700;
     line-height: 142.6%;
+    max-width: 100%;
+    width: 100%;
 }
 .erreur {
     color: #ff6060;
@@ -28,7 +30,7 @@
     letter-spacing: 0%;
 }
 .retour-accueil {
-    width: 284px;
+    width: 100%;
     height: 26px;
     padding-top: 839px;
     padding-left: 578px;
@@ -77,6 +79,9 @@
     }
 }
 @media (min-width: 768px) {
+    nav {
+        margin-left: 0;
+    }
     .erreur-404 {
         padding-left: 110px;
     }
@@ -88,7 +93,7 @@
         padding-left: 250px;
     }
     #root {
-        max-width: 750px;
+        max-width: 100%;
     }
 }
 @media (min-width: 1024px) {
@@ -107,12 +112,6 @@
     }
 }
 @media (min-width: 1440px) {
-    .erreur-404 {
-        margin-left: 300px;
-    }
-    .erreur {
-        left: 320px;
-    }
     .retour-accueil {
         padding-left: 570px;
     }
