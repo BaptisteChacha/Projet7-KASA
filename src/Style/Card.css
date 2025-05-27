@@ -79,7 +79,6 @@ li:hover .text {
 @media (min-width: 321px) {
     .img_location {
         max-width: 310px;
-        margin-left: 30px;
     }
 
     .text {
@@ -174,7 +173,7 @@ li:hover .text {
         max-width: 100%;
     }
     #Cards {
-        width: 98%;
+        width: 100%;
         max-width: 100%;
         margin: 0;
     }

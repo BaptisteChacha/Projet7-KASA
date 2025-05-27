@@ -80,13 +80,19 @@ body {
 /* 321px - 375px */
 @media (min-width: 321px) and (max-width: 375px) {
     .container_img_header img {
-        margin-left: 30px;
         max-width: 325px;
     }
 
     .Text-logo {
         padding-left: 45px;
         padding-top: 50px;
+    }
+    .dimension {
+        width: 336px;
+        padding-left: 30px;
+    }
+    .section_principale {
+        width: 336px;
     }
 }
 
@@ -204,5 +210,9 @@ body {
 
     #root {
         max-width: 1440px;
+    }
+    .dimension {
+        width: 1240px;
+        margin-left: 100px;
     }
 }
